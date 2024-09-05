@@ -1,5 +1,5 @@
 header {
-    font-size: 2.5em;
+    font-size: 3em;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
     font-weight: 700;
@@ -11,7 +11,10 @@ header {
 
 main {
     margin: 25px 25px;
-
+    font-size: 18px;
 }
 
-
+main p:last-of-type {
+    font-size: 1.75em;
+    font-weight: 750;
+}
