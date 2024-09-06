@@ -1,20 +1,43 @@
+
+
 header {
-    font-size: 3em;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: italic;
-    font-weight: 700;
-    line-height: 75px;
+    background-color: yellow;
+    font: italic 700 3em/75px Georgia, 'Times New Roman', Times, serif;
     text-align: center;
     text-shadow: 1px 2px 4px black;
     color: #9B00A0;
 }
 
-main {
-    margin: 25px 25px;
-    font-size: 18px;
+p, h3, ul{
+    margin: 10px 10px;
+    font-family: Arial, Helvetica, serif;
+    
 }
 
-main p:last-of-type {
-    font-size: 1.75em;
+main>ul>li>p{
+    font-weight: 500;
+}
+
+li a{
+    font-weight: 500;
+    margin-left: 12.5px;
+}
+
+a:hover{
+    color: rgb(0,125,0);
+}
+
+a:focus{
+    color: rgba(255,0,0,1);
+}
+
+main {
+    margin: 10px 25px;
     font-weight: 750;
+    font-size: 16px;
+}
+
+main>p:last-of-type {
+    margin: 0px 25px 10px;
+    text-decoration-line: underline;
 }
