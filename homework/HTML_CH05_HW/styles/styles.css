@@ -2,5 +2,7 @@
     padding: 0px 16px;
 }
 header {
+    margin: 0px;
     border-bottom: 10px dashed #ffcc00;
+    padding: 0px;
 }
