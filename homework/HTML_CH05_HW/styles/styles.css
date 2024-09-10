@@ -19,5 +19,9 @@ nav {
 }
 
 body {
-    background-image: linear-gradient(to bottom, purple, green )
+    background-image: linear-gradient(to right, green, purple, black)
+}
+
+header {
+    background-image: linear-gradient(45deg, green 5%, purple, black 95%)
 }
