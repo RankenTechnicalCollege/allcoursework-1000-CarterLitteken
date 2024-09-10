@@ -28,6 +28,7 @@ header {
 }
 
 #p1 {
+    color: palevioletred;
     height: 20px;
     width: 500px;
     border: 5px dotted seashell;
@@ -36,6 +37,7 @@ header {
 }
 
 #p2 {
+    color: pink;
     height: 35px;
     width: 160px;
     border: 2px solid teal;
