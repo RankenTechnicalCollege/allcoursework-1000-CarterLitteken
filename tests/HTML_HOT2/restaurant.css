@@ -1,6 +1,7 @@
 header {
     background-color: lightgray;
     color: black;
+    
 }
 
 .jumbotron {
@@ -11,6 +12,10 @@ header {
     font-family:'Times New Roman', Times, serif;
 }
 
-a:link {
+a:focus {
     color: whitesmoke;
+}
+
+main a {
+    color:burlywood;
 }
