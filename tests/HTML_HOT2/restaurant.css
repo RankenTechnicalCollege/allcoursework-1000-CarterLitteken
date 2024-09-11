@@ -6,9 +6,9 @@ header {
 .jumbotron {
     width: 100% 20vh;
     background-image: url("Big_Chief_Building_2.jpg");
-    color: gold;
+    color: moccasin;
 }
 
 a:link {
-    color: gold;
+    color: moccasin;
 }
