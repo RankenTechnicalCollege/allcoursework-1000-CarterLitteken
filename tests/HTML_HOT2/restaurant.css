@@ -8,3 +8,7 @@ header {
     background-image: url("Big_Chief_Building_2.jpg");
     color: gold;
 }
+
+a:link {
+    color: gold;
+}
