@@ -23,3 +23,8 @@ a:focus {
 main a {
     color:burlywood;
 }
+
+#map {
+    counter-reset: black;
+    background-color: lightgray;
+}
