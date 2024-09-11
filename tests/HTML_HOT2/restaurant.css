@@ -1,15 +1,19 @@
 header {
     background-color: lightgray;
     color: black;
-    
+    font-size: 1.1em;    
 }
 
 .jumbotron {
     width: 100% 20vh;
     background-image: url("Big_Chief_Building_2.jpg");
     color: whitesmoke;
-    font-weight: 750;
+    font-weight: bolder;
     font-family:'Times New Roman', Times, serif;
+}
+
+#menu {
+    font: normal normal bolder 1.2em 'Times New Roman', Times, serif;
 }
 
 a:focus {
