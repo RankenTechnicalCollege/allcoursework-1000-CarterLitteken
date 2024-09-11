@@ -13,7 +13,7 @@ header {
 }
 
 #menu {
-    font: normal normal bolder 1.2em 'Times New Roman', Times, serif;
+    font: normal normal bolder 1em 'Times New Roman', Times, serif;
 }
 
 a:focus {
@@ -27,4 +27,10 @@ main a {
 #map {
     counter-reset: black;
     background-color: lightgray;
+}
+
+footer {
+    color: white;
+    background-color: black;
+    text-align: center;
 }
