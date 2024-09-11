@@ -3,3 +3,7 @@ header {
     color: black;
 }
 
+.jumbotron {
+    width: 100% 20vh;
+    background-image: image();
+}
