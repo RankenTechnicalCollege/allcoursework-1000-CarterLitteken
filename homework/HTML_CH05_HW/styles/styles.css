@@ -2,7 +2,7 @@
     margin: 0px 16px;
 }
 
-h1, h3 {
+h1, h2 {
     margin: 0px 0px 0px;
     border-bottom: 10px dashed #ffcc00;
     padding: 5px;
@@ -51,10 +51,17 @@ header {
 #p2 {
     color: pink;
     height: 40px;
-    width: 700px;
+    width: 760px;
     border: 2px solid teal;
-    margin: 25px;
+    margin: 15px;
     padding: 5px 0px 20px 20px;
+    text-align: center;
+}
+
+main img {
+    margin: 0px 50px 15px;
+    padding: 0px;
+    border: 2px solid teal;
 }
 
 footer img {
