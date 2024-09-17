@@ -29,7 +29,7 @@ body{
 }
 
 .header-text{
-    padding: 5em;
+    padding: .5em;
     flex-shrink: 0;
 }
 
