@@ -21,3 +21,14 @@ body{
     justify-content: flex-start;
     align-items: center;
 }
+
+.header-logo{
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+}
+
+.header-text{
+    padding: 5em;
+    flex-shrink: 0;
+}
