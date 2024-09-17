@@ -108,8 +108,8 @@ body{
     padding-left: 2em;
 }
 
-.navbar-link:hover > .navbar-menu,
-.navbar-link:hover ~ .navbar-menu,
+.navbar-item:hover > .navbar-menu,
+.navbar-link:hover ~ .navbar-menu,  
 .navbar-link:focus-within > .navbar-menu,
 .navbar-link:focus ~ .navbar-menu{
     display: flex;
