@@ -89,6 +89,16 @@ body{
     background-color: gray;
 }
 
+.navbar-menu .navbar-menu{
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    position: absolute;
+    top: 100%;
+    min-width:10em;
+}
+
 .navbar-menu .navbar-menu .navbar-item{
     flex: 0 0 3em;
 }
