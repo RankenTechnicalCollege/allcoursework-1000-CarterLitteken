@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+    <!-- HEADER -->
     <header class="header">
         <a href="home.html">
             <img alt="" src="images/shop.png" class="header-logo">
         </a>
         <h1 class="header-text">
-            <a href="home.html">My Shop</a>
+            <a href="home.html">Martial and Magic</a>
         </h1>
         <form method="get" action="search.html" class="header-searchform">
             <input type="search" placeholder="search" class="header-searchbox">
@@ -24,12 +25,72 @@
             <img alt="Shopping Cart" title="Shopping Cart" src="images/cart.png" class="header-cart">
         </a>
     </header>
+    <!-- NAV -->
     <nav class="navbar">
         <ul class="navbar-menu">
             <li class="navbar-item">
-                <div class="navbar-link" tabindex="0"></div>
+                <div class="navbar-link" tabindex="0">Equipment</div>
+                <ul class="navbar-menu">
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-link">Weapons</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-link">Armor</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="navbar-item">
+                <div class="navbar-link" tabindex="1">R&and;R</div>
+                <ul class="navbar-menu">
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-link">Rings</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-link">Rods</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="navbar-item">
+                <div class="navbar-link" tabindex="1">Arcane Focus</div>
+                <ul class="navbar-menu">
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-link">Staffs</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="#" class="navbar-link">Wands</a>
+                    </li>
+                </ul>
             </li>
         </ul>
     </nav>
+    <!-- MAIN -->
+    <main class="content">
+        <ul class="product-list">
+            <li class="product">
+                <div class="product-img" style="background-image:url(images/product-1.jpg);"></div>
+                <div class="product-name">Fancy Camera</div>
+                <div class="product-price">$199.99</div>
+            </li>
+            <li class="product">
+                <div class="product-img" style="background-image:url(images/product-2.jpg);"></div>
+                <div class="product-name">Special Camera</div>
+                <div class="product-price">$299.99</div>
+            </li>
+            <li class="product">
+                <div class="product-img" style="background-image:url(images/product-3.jpg);"></div>
+                <div class="product-name">Glitzy Camera</div>
+                <div class="product-price">$399.99</div>
+            </li>
+        </ul>
+    </main>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-address">
+            <div class="footer-address-line">4431 Finney Ave</div>
+            <div class="footer-address-line">St. Louis, MO 63114</div>
+            <div class="footer-address-line">1-866-4-RANKEN</div>
+        </div>
+        <div class="footer-copyright">&copy; Flex Shop 2019</div>
+    </footer>
 </body>
 </html>
