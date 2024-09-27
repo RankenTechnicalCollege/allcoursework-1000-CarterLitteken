@@ -9,15 +9,39 @@ th, td {
     text-align: left;
 }
 
-.right {
-    text-align: right;
-}
-
 thead, tr:nth-of-type(even), tfoot {
     background-color: yellow;
 }
 
-tfoot {
-    font-weight: bold;
+tbody > tr > th {
+    background-color: white;
+    vertical-align: text-top;
 }
 
+tbody > tr > td:last-child {
+    text-align: right;
+}
+
+tfoot > tr > th {
+    font-weight: bold;
+    text-align: right;
+}
+
+figure, figcaption {
+    margin: 0;
+    padding: 0;
+}
+
+figure {
+    border: 1px solid black;
+    padding: 20px;
+    width: 579px;
+}
+
+figcaption {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    font-size: 150%;
+    padding-bottom: .25em;
+}
