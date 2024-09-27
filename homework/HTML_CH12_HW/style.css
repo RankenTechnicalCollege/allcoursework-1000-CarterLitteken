@@ -6,14 +6,14 @@ table {
 th, td {
     border: 1px solid black;
     padding: .2em .7em;
-    text-align: right;
-}
-
-th.left, td.left {
     text-align: left;
 }
 
-thead, tfoot {
+.right {
+    text-align: right;
+}
+
+thead, tr:nth-of-type(even), tfoot {
     background-color: yellow;
 }
 
