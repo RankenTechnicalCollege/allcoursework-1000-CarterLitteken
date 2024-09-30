@@ -1,0 +1,21 @@
+.jumbotron {
+    color: white;
+    text-shadow: 3px 3px black;
+    text-align: center;
+    background-image: url('images/shopjumbotron.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-copyright {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
