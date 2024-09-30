@@ -13,6 +13,12 @@
     align-items: center;
 }
 
+.card-image-top {
+    height: 100px;
+    width: 100px;
+    display: flex;
+}
+
 .footer-copyright {
     text-align: center;
     display: flex;
