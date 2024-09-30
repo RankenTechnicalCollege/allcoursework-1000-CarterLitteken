@@ -13,10 +13,11 @@
     align-items: center;
 }
 
-.card-image-top {
-    height: 100px;
-    width: 100px;
+.card-img-top {
+    height: 250px;
+    width: 250px;
     display: flex;
+    align-items: flex-start;
 }
 
 .footer-copyright {
