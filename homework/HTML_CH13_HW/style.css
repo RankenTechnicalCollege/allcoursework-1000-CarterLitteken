@@ -1,0 +1,11 @@
+fieldset {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding-top: .5em;
+    width: 400px;
+}
+
+textarea {
+    width: 60ch;
+    height: 44px;
+}
