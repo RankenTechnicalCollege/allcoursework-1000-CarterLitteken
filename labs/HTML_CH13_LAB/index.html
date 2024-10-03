@@ -9,21 +9,21 @@
 <body>
     <form id="order-form" action="/order" method="post">
         <h2>Order Form</h2>
-        <label for="first-name">Given Name</label><br>
-        <input type="text" name="first-name" id="first-name" autofocus required>
+        <label for="given-name">Given Name</label><br>
+        <input type="text" name="given-name" id="given-name" autofocus required autocomplete="given-name">
         <br><br>
-        <label for="last-name">Family Name</label><br>
-        <input type="text" name="last-name" id="last-name" required>
+        <label for="family-name">Family Name</label><br>
+        <input type="text" name="family-name" id="family-name" required autocomplete="family-name">
         <br><br>
         <label for="phone">Phone Number</label><br>
-        <input type="text" name="phone" id="phone" required 
+        <input type="text" name="phone" id="phone" required autocomplete="tel"
         pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="Use this format 123-456-7890">
         <br><br>
         <label for="email-address">E-Mail Address</label><br>
-        <input type="email" name="email-address" id="email-address" required>
+        <input type="email" name="email-address" id="email-address" required autocomplete="email">
         <br><br>
         <label for="cofirm-email">Confirm E-Mail</label><br>
-        <input type="email" name="confirm-email" id="confirm-email" required>
+        <input type="email" name="confirm-email" id="confirm-email">
         <br><br>
         <label for="password">Password</label><br>
         <input type="password" name="password" id="password" required 
@@ -37,10 +37,13 @@
             <legend>Credit Card</legend>
             <br>
             <label for="card-number">Credit Card Number</label><br>
-            <input type="text" name="card-number" id="card-number" required>
+            <input type="text" name="card-number" id="card-number" required autocomplete="cc-number">
             <br><br>
-            <label for="exp-date">Expiration Date</label><br>
-            <input type="text" name="exp-date" id="exp-date" required>
+            Expiration Date<br>
+            <label for="exp-month">Month</label><br>
+            <input type="number" name="exp-month" id="exp-month" required autocomplete="cc-exp-month"><br>
+            <label for="exp-year">Year</label><br>
+            <input type="number" name="exp-year" id="exp-year" required autocomplete="cc-exp-year">
             <br><br>
             <label for="cvv">CVV</label><br>
             <input type="number" name="cvv" id="cvv" required>
