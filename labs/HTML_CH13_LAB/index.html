@@ -35,6 +35,7 @@
         <br><br>
         <fieldset>
             <legend>Credit Card</legend>
+            <br><br>
             <label for="card-number">Credit Card Number</label><br>
             <input type="text" name="card-number" id="card-number" required>
             <br><br>
@@ -43,27 +44,34 @@
             <br><br>
             <label for="cvv">CVV</label><br>
             <input type="number" name="cvv" id="cvv" required>
+            <br><br>
         </fieldset>
         <br><br>
         <fieldset>
             <legend>Billing Address</legend>
+            <br><br>
             <label for="bill-address">Street Address</label><br>
             <input type="text" name="bill-address" id="bill-address" required>
             <br><br>
             <label for="bill-address-extra">Address line #2</label><br>
             <input type="text" name="bill-address-extra" id="bill-address-extra" required>
             <br><br>
-            <label for="city">City</label><br>
-            <input type="text" name="city" id="city" required>
+            <label for="bill-city">City</label><br>
+            <input type="text" name="bill-city" id="bill-city" required>
             <br><br>
-            <label for="state">State</label><br>
-            <select name="state" id="state">
+            <label for="bill-state">State</label><br>
+            <select name="bill-state" id="bill-state">
                 <option value="none"></option>
                 <option value="il">IL</option>
                 <option value="mo">MO</option>
             </select>
             <br><br>
+            <label for="bill-zip">Zip Code</label><br>
+            <input type="text" name="bill-zip" id="bill-zip" required
+            pattern="^\d{5}(-\d{4})?$">
+            <br><br>
         </fieldset>
+        <br><br>
         <button type="submit" id="submit" value="submit">Submit</button>
     </form>
 </body>
