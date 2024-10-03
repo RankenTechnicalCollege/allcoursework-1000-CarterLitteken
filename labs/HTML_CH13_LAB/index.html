@@ -7,19 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-    <form id="order">
+    <form id="order-form" action="/order" method="post">
         <h2>Music Survey</h2>
-        Given Name
+        <label for="first-name">Given Name</label>
         <br>
-        <input type="text" id="given-name" autofocus required>
+        <input type="text" name="first-name" id="first-name" autofocus required>
         <br><br>
-        Family Name
+        <label for="last-name">Family Name</label>
         <br>
-        <input type="text" id="family-name" required>
+        <input type="text" name="last-name" id="last-name" required>
         <br><br>
-        Phone Number
+        <label for="phone">Phone Number</label>
         <br>
-        <input type="text" id="phone" required pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="Use this format 123-456-7890">
+        <input type="text" name="phone" id="phone" required pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="Use this format 123-456-7890">
         <br><br>
         E-Mail Address
         <br>
@@ -28,6 +28,13 @@
         Confirm E-Mail
         <br>
         <input type="email" id="email-comfirm" required>
+        Password
+        <br>
+        <input type="password" id="password" required>
+        <br><br>
+        Confirm Password
+        <br>
+        <input type="password" id="password-confirm" required>
     </form>
 </body>
 </html>
