@@ -53,13 +53,13 @@
             <legend>Billing Address</legend>
             <br>
             <label for="bill-address">Street Address</label><br>
-            <input type="text" name="bill-address" id="bill-address" required>
+            <input type="text" name="bill-address" id="bill-address" required autocomplete="address-line1">
             <br><br>
             <label for="bill-address-extra">Address line #2</label><br>
-            <input type="text" name="bill-address-extra" id="bill-address-extra" required>
+            <input type="text" name="bill-address-extra" id="bill-address-extra" required autocomplete="address-line2">
             <br><br>
             <label for="bill-city">City</label><br>
-            <input type="text" name="bill-city" id="bill-city" required>
+            <input type="text" name="bill-city" id="bill-city" required autocomplete="address-level3">
             <br><br>
             <label for="bill-state">State</label><br>
             <select name="bill-state" id="bill-state">
@@ -69,7 +69,7 @@
             </select>
             <br><br>
             <label for="bill-zip">Zip Code</label><br>
-            <input type="text" name="bill-zip" id="bill-zip" required
+            <input type="text" name="bill-zip" id="bill-zip" required autocomplete="address-level4"
             pattern="^\d{5}(-\d{4})?$">
             <br><br>
         </fieldset>
@@ -78,13 +78,13 @@
             <legend>Shipping Address</legend>
             <br>
             <label for="ship-address">Street Address</label><br>
-            <input type="text" name="ship-address" id="ship-address" required>
+            <input type="text" name="ship-address" id="ship-address" required autocomplete="address-line1">
             <br><br>
             <label for="ship-address-extra">Address line #2</label><br>
-            <input type="text" name="ship-address-extra" id="ship-address-extra" required>
+            <input type="text" name="ship-address-extra" id="ship-address-extra" required autocomplete="address-line2">
             <br><br>
             <label for="ship-city">City</label><br>
-            <input type="text" name="ship-city" id="ship-city" required>
+            <input type="text" name="ship-city" id="ship-city" required autocomplete="address-level3">
             <br><br>
             <label for="ship-state">State</label><br>
             <select name="ship-state" id="ship-state">
@@ -94,7 +94,7 @@
             </select>
             <br><br>
             <label for="ship-zip">Zip Code</label><br>
-            <input type="text" name="ship-zip" id="ship-zip" required
+            <input type="text" name="ship-zip" id="ship-zip" required autocomplete="address-level4"
             pattern="^\d{5}(-\d{4})?$">
             <br><br>
         </fieldset>
