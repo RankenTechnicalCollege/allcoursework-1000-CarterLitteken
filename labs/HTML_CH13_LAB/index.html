@@ -26,7 +26,7 @@
         <input type="email" name="confirm-email" id="confirm-email">
         <br><br>
         <label for="password">Password</label><br>
-        <input type="password" name="password" id="password" required 
+        <input type="password" name="password" id="password" required autocomplete="current-password"
         pattern="[a-zA-Z0-9]{6,}" title="Must be at least 6 characters">
         <br><br>
         <label for="confirm-password">Confirm Password</label><br>
@@ -57,7 +57,7 @@
             <input type="text" name="bill-address-extra" id="bill-address-extra" required autocomplete="address-line2">
             <br><br>
             <label for="bill-city">City</label><br>
-            <input type="text" name="bill-city" id="bill-city" required autocomplete="address-level3">
+            <input type="text" name="bill-city" id="bill-city" required autocomplete="address-level2">
             <br><br>
             <label for="bill-state">State</label><br>
             <select name="bill-state" id="bill-state">
@@ -67,7 +67,7 @@
             </select>
             <br><br>
             <label for="bill-zip">Zip Code</label><br>
-            <input type="text" name="bill-zip" id="bill-zip" required autocomplete="address-level4"
+            <input type="text" name="bill-zip" id="bill-zip" required autocomplete="billing postal-code"
             pattern="^\d{5}(-\d{4})?$">
             <br><br>
         </fieldset>
@@ -82,7 +82,7 @@
             <input type="text" name="ship-address-extra" id="ship-address-extra" required autocomplete="address-line2">
             <br><br>
             <label for="ship-city">City</label><br>
-            <input type="text" name="ship-city" id="ship-city" required autocomplete="address-level3">
+            <input type="text" name="ship-city" id="ship-city" required autocomplete="address-level2">
             <br><br>
             <label for="ship-state">State</label><br>
             <select name="ship-state" id="ship-state">
@@ -92,7 +92,7 @@
             </select>
             <br><br>
             <label for="ship-zip">Zip Code</label><br>
-            <input type="text" name="ship-zip" id="ship-zip" required autocomplete="address-level4"
+            <input type="text" name="ship-zip" id="ship-zip" required autocomplete="postal-code"
             pattern="^\d{5}(-\d{4})?$">
             <br><br>
         </fieldset>
