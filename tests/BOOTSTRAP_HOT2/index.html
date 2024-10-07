@@ -12,67 +12,105 @@
     <main>
         <div class="d-flex flex-row justify-content-around bg-secondary">
             <div class="row row-cols-md-3">
-            <!-- Accordion -->
-            <div class="card">
-                <div class="card-header">
-                    <a class="btn" data-bs-toggle="collapse" href="#collapse-one">
-                        Best Pasta To Use
-                    </a>
-                </div>
-                <div id="collapse-one" class="collapse show" data-bs-parent="#accordion">
-                    <div class="card-body">
-                        <ul>
-                            <li>
-                                Spaghetti
-                            </li>
-                            <li>
-                                Elbow macaroni
-                            </li>
-                            <li>
-                                Penne
-                            </li>
-                            <li>
-                                Rigatoni
-                            </li>
-                            <li>
-                                Orecchiette
-                            </li>
-                            <li>
-                                Ziti
-                            </li>
-                            <li>
-                                Farfalle
-                            </li>
-                        </ul>
+                <!-- Accordion -->
+                <div class="card">
+                    <div class="card-header">
+                        <a class="btn" data-bs-toggle="collapse" href="#collapse-one">
+                            Best Pasta To Use
+                        </a>
+                    </div>
+                    <div id="collapse-one" class="collapse show" data-bs-parent="#accordion">
+                        <div class="card-body">
+                            <ul>
+                                <li>
+                                    Spaghetti
+                                </li>
+                                <li>
+                                    Elbow macaroni
+                                </li>
+                                <li>
+                                    Penne
+                                </li>
+                                <li>
+                                    Rigatoni
+                                </li>
+                                <li>
+                                    Orecchiette
+                                </li>
+                                <li>
+                                    Ziti
+                                </li>
+                                <li>
+                                    Farfalle
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-header">
+                        <a class="btn" data-bs-toggle="collapse" href="#collapse-two">
+                            Personal Favorite
+                        </a>
+                    </div>
+                    <div id="collapse-two" class="collapse show" data-bs-parent="#accordion">
+                        <div class="card-body">
+                            <ul>
+                                <li>
+                                    Penne
+                                </li>
+                                <li>
+                                    Farfalle
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="card-header">
-                    <a class="btn" data-bs-toggle="collapse" href="#collapse-two">
-                        Personal Favorite
-                    </a>
+                <div class="list">
+                    <ul class="list-group">
+                        <li class="badge rounded-pill bg-light text-primary m-1"><h4>1 tbsp. Salt</h4>plus more for seasoning</li>
+                        <li class="badge rounded-pill bg-warning text-primary m-1"><h4>8 oz. Egg Noodles</h4></li>
+                        <li class="badge rounded-pill bg-light text-primary m-1"><h4>2 tbsp. Butter</h4></li>
+                    </ul>
                 </div>
-                <div id="collapse-two" class="collapse show" data-bs-parent="#accordion">
-                    <div class="card-body">
-                        <ul>
-                            <li>
-                                Penne
-                            </li>
-                            <li>
-                                Farfalle
-                            </li>
-                        </ul>
+                <div>
+                    <img class="img-fluid" src="images/buttered-noodles.jpg" alt="butter-noodle">
+                </div>
+                <div class="pre-modal">
+                    <h3>Optional Ingredients</h3>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                        Click for List
+                    </button>
+                    <!-- The Modal -->
+                    <div class="modal" id="myModal">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                  <h4 class="modal-title">Optional Ingredients</h4>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <ul>
+                                        <li>
+                                            2 tbsp. grated Parmesan cheese
+                                        </li>
+                                        <li>
+                                            1 tbsp. chopped fresh parsley
+                                        </li>
+                                        <li>
+                                            Freshly ground black pepper
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="list">
-                <ul class="list-group">
-                    <li class="badge rounded-pill bg-light text-primary m-1"><h4>1 tbsp. Salt</h4>plus more for seasoning</li>
-                    <li class="badge rounded-pill bg-warning text-primary m-1"><h4>8 oz. Egg Noodles</h4></li>
-                    <li class="badge rounded-pill bg-light text-primary m-1"><h4>2 tbsp. Butter</h4></li>
-                </ul>
-            </div>
-            <img class="img-fluid" src="images/buttered-noodles.jpg" alt="butter-noodle">
-        </div>
         </div>
     </main>
 </body>
