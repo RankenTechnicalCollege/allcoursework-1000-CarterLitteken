@@ -11,14 +11,15 @@
 <body>
     <main>
         <div class="d-flex flex-row justify-content-around bg-secondary">
+            <div class="row row-cols-md-3">
             <!-- Accordion -->
             <div class="card">
                 <div class="card-header">
-                    <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
+                    <a class="btn" data-bs-toggle="collapse" href="#collapse-one">
                         Best Pasta To Use
                     </a>
                 </div>
-                <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+                <div id="collapse-one" class="collapse show" data-bs-parent="#accordion">
                     <div class="card-body">
                         <ul>
                             <li>
@@ -45,6 +46,23 @@
                         </ul>
                     </div>
                 </div>
+                <div class="card-header">
+                    <a class="btn" data-bs-toggle="collapse" href="#collapse-two">
+                        Personal Favorite
+                    </a>
+                </div>
+                <div id="collapse-two" class="collapse show" data-bs-parent="#accordion">
+                    <div class="card-body">
+                        <ul>
+                            <li>
+                                Penne
+                            </li>
+                            <li>
+                                Farfalle
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="list">
                 <ul class="list-group">
@@ -54,6 +72,7 @@
                 </ul>
             </div>
             <img class="img-fluid" src="images/buttered-noodles.jpg" alt="butter-noodle">
+        </div>
         </div>
     </main>
 </body>
