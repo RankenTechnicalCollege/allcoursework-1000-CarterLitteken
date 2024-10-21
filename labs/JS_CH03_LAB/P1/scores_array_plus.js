@@ -1,3 +1,5 @@
+let total = 0;
+
 // declare and initialize an array to hold test scores from user
 const scores = [];
 
@@ -8,7 +10,7 @@ do {
 
   if (score >= 0 && score <= 100) {scores[scores.length] = score;}
 
-  else if (score != -1) {alert("SCore must be a valid number from 0 through 100");}
+  else if (score != -1) {alert("Score must be a valid number from 0 through 100");}
 
 }
 while(score != -1);
