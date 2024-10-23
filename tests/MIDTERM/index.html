@@ -14,7 +14,7 @@
     body {
       font-family: 'Noto Serif';
     }
-    .jumbotron > h1 {
+    .jumbotron-title {
       text-align: center;
     }
   </style>
@@ -55,16 +55,51 @@
   <main>
     <!-- Jumbotron 1 -->
     <div class="container">
-      <div class="jumbotron bg-dark text-primary shadow-lg p-3 mb-5 bg-body rounded">
+      <div class="jumbotron text-primary shadow-lg p-3 mb-5 bg-body rounded w-100 mx-auto">
         <h1 class="jumbotron-title display-4">Mission Statement</h1>
         <h1 class="jumbotron-title display-6">Connecting Through Charity provides year-round
-          giving to the local community to help children, families, and individuals in need overcome hardship.</h1>
+          giving to the local community to help children, families, and individuals in need overcome hardship.
+        </h1>
       </div>
     </div>
+    <!-- Jumbotron 2 -->
     <div class="comtainer">
-      <div class="jumbotron bg-dark text-primary shadow-lg p-5 mb-5 bg-body rounded">
-        <h2 class="jumbotron-title">Vision Statement</h2>
-        <h2 class="jumbotron-title">Staying connected in the local community to positively impact the life of others.</h2>
+      <div class="jumbotron text-primary p-3 mb-5 rounded w-75 mx-auto">
+        <h2 class="jumbotron-title display">Vision Statement</h2>
+        <h3 class="jumbotron-title display">Staying connected in the local community to positively impact the life of others.</h3>
+      </div>
+    </div>
+    <!-- Card + Carousel(Image Slider) -->
+    <div class="card w-50 mx-auto">
+      <div id="carouselGallery" class="carousel slide mx-auto" data-bs-ride="true">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselGallery" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselGallery" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselGallery" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="midterm_images/ct_care_bags.jpg" class="d-block w-100" alt="care">
+          </div>
+          <div class="carousel-item">
+            <img src="midterm_images/ctc_blessing_bags.jpg" class="d-block w-100" alt="blessing">
+          </div>
+          <div class="carousel-item">
+            <img src="midterm_images/ctc_raffle_basket_winner.jpg" class="d-block w-100" alt="raffle">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselGallery" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselGallery" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="card-body">
+        <p class="card-text">Our Projects</p>
+        <p class="card-text"></p>
       </div>
     </div>
   </main>
