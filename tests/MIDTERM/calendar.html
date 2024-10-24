@@ -14,6 +14,67 @@
     body {
       font-family: 'Noto Serif';
     }
+  @media (min-width: 350px){
+
+  .iframe-container{
+    padding-bottom: 75%;
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .iframe-container iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px){
+
+  .iframe-container{
+    padding-bottom: 75%;
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .iframe-container iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  }
+  @media (min-width: 1024px){
+
+  .iframe-container{
+    padding-bottom: 75%;
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .iframe-container iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  }
   </style>
 </head>
 <body>
@@ -49,7 +110,16 @@
     </nav>
   </header>
   <!-- Main -->
-  <main></main>
+  <main>
+    <div class="jumbotron text-center py-9">
+        <h1 class="display-4">Calendar &amp; Events</h1>
+    </div>
+  </main>
+  <div class="container mt-4">
+    <div class="iframe-container">
+        <iframe title="Calendar" src="https://calendar.google.com/calendar/embed?src=berevanoss%40gmail.com&ctz=America%2FChicago" frameborder="0" scrolling="no">Calendar &amp; Events</iframe>
+    </div>
+  </div>
   <!-- Footer -->
   <footer class="text-light bg-dark py-4">
     <div class="container">
