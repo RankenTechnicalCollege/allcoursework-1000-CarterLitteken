@@ -12,7 +12,11 @@
   <link href="https://fonts.googleapis.com/css2?last=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <style>
     body {
-      font-last: 'Noto Serif';
+      font-family: 'Noto Serif';
+    }
+
+    .form-label {
+      font-size: 32px;
     }
   </style>
 </head>
@@ -55,8 +59,8 @@
       <div class="form-header text-center">
         <h1 class="display-1">Donate</h1>
       </div>
-      <div class="first-name text-center">
-        <label for="first-name">Your Name</label><br>
+      <div class="name text-center">
+        <label for="first-name" class="form-label">Your Name</label><br>
         <input type="text" name="first-name" id="first-name" class="form-control border border-primary w-25 mx-auto text-center" placeholder="First Name" autofocus required autocomplete="given-name">
         <input type="text" name="last-name" id="last-name" class="form-control border border-primary w-25 mx-auto text-center" placeholder="Last Name" required autocomplete="family-name">
       </div>
