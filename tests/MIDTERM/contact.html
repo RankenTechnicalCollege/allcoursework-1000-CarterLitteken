@@ -14,11 +14,13 @@
     body {
       font-family: 'Noto Serif';
     }
-    iframe {
-      min-width: 100%;
-      max-width: 100%;
-      height: 539px;
-      border: none;
+
+    .form-label {
+      font-size: 32px;
+    }
+    
+    .btn {
+      font-size: 24px;
     }
   </style>
 </head>
@@ -57,6 +59,26 @@
   <!-- Main -->
   <main>
     <!-- Make form for sending an email to them -->
+    <form id="contact-form" action="email.php" method="post">
+      <div class="form-header text-center">
+        <h1 class="display-1">Contact</h1>
+      </div>
+      <br><br>
+      <div class="user-email text-center">
+        <label for="user-email" class="form-label">Your E-Mail Address</label><br>
+        <input type="email" class="form-control border border-primary w-25 mx-auto text-center" name="user-email" id="user-email" required autocomplete="email">
+      </div>
+      <br><br>
+      <div class="user-message text-center">
+        <label for="user-message" class="form-label text-center">Your Massage</label>
+        <textarea class="form-control border border-primary w-50 mx-auto" id="user-message" rows="14"></textarea>
+      </div>
+      <br><br>
+      <div class="submit-button text-center">
+        <button type="submit" class="btn btn-primary mx-auto text-center" id="submit" value="submit">Send E-Mail</button>
+      </div>
+      <br><br>
+    </form>
   </main>
   <!-- Footer -->
   <footer class="text-light bg-dark py-4">
