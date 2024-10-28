@@ -22,13 +22,18 @@ if (scores.length > 0) {
   for (let i in scores) {
     total = total + scores[i];
     document.write(`<p>Score ${parseInt(i) + 1}: ${scores[i]}</p>`);
+    if (scores[i] > highestScore) {highestScore = scores[i];}
   }
 
   //calculate and display the average
   const average = parseInt(total/scores.length);
   document.write(`<p>Average score is ${average}</p>`);
+  document.write(`<p>Highest score is ${highestScore}</p>`);
 }
 
-for (let i of scores) {
-  if (i > highestScore) {highestScore = score;}
+/*
+for (const score of scores) {
+  if (score > highestScore) {highestScore = score;}
 }
+document.write(`<p>Highest score is ${highestScore}</p>`);
+*/
