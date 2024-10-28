@@ -17,6 +17,7 @@
 
     .form-label {
       font-size: 32px;
+      text-align: center;
     }
   </style>
 </head>
@@ -69,6 +70,35 @@
       <div class="email text-center">
         <label for="email" class="form-label">E-Mail Address</label><br>
         <input type="email" class="form-control border border-primary w-25 mx-auto text-center" name="email" id="email" required autocomplete="email">
+      </div>
+      <br><br>
+      <div class="donation text-center">
+        <label for="donation" class="form-label text-center mx-auto">Donation Amount</label><br>
+      </div>
+      <div class="input-group mb-3 w-25 mx-auto border rounded border-primary">
+        <span class="input-group-text">$</span>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <span class="input-group-text">.00</span>
+      </div>
+      <br><br>
+      <!-- Add Back autocomplete when website is secure -->
+      <div class="number text-center">
+        <label for="card-number" class="form-label">Credit Card Number</label><br>
+        <input type="text" name="card-number" id="card-number" required>
+      </div>
+      <br><br>
+      <div class="expiration text-center">
+        <label for="exp-date" class="form-label">Expiration Date</label><br>
+        <input type="month" name="exp-date" id="exp-date" required>
+      </div>
+      <br><br>
+      <div class="CSC text-center">
+        <label for="CSC" class="form-label">CSC</label><br>
+        <input type="text" name="CSC" id="CSC" required>
+      </div>
+      <br><br>
+      <div class="submit-button text-center">
+        <button type="submit" class="btn btn-primary mx-auto text-center" id="submit" value="submit">Submit</button>
       </div>
       <br><br>
     </form>
