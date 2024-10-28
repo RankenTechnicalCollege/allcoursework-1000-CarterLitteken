@@ -14,7 +14,7 @@ do {
     rate = parseFloat(prompt("Enter interest rate as xx.x\n"
       + "(Must be a number above 0 to 15)", 7.5));
   }
-  while ( isNaN(rate) || 0 <= rate < 15);
+  while ( isNaN(rate) || 0 <= rate > 15);
 
   let years = 0;
   do {
