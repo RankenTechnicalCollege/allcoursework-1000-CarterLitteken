@@ -1,3 +1,4 @@
+let highestScore = 0;
 let total = 0;
 
 // declare and initialize an array to hold test scores from user
