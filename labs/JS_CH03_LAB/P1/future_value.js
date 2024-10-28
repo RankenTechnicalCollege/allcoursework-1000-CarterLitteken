@@ -23,9 +23,9 @@ do {
   }
   while ( isNaN(years) || years <= 0);
 
-  document.write(`<p><label>Investment amount:</label> ${investment}</p>`);
-  document.write(`<p><label>Interest rate:</label> ${rate}</p>`);
-  document.write(`<p><label>Years:</label> ${years}</p>`);
+  document.write(`<h4><label>Investment amount:</label> ${investment}</h4>
+    <h4><label>Interest rate:</label> ${rate}</h4>
+    <h4><label>Years:</label> ${years}</h4>`);
 
   let futureValue = investment;
   let interest = 0;
