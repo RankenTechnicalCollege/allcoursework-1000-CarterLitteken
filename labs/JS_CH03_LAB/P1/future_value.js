@@ -5,19 +5,19 @@ do {
   do {
     investment = parseFloat(prompt("Enter investment amount as xxxxx.xx", 10000));
   }
-  while ( isNaN(investment) );
+  while ( isNaN(investment) && 0 < investment );
 
   let rate = 0;
   do {
     rate = parseFloat(prompt("Enter interest rate as xx.x", 7.5));
   }
-  while ( isNaN(rate) );
+  while ( isNaN(rate) && 0 < rate );
 
   let years = 0;
   do {
     years = parseInt(prompt("Enter number of years", 10));
   }
-  while ( isNaN(years) );
+  while ( isNaN(years) && 0 < years );
 
   let futureValue = investment;
   for (let i = 1; i <= years; i++ ) {
