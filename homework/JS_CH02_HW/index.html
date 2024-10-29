@@ -8,27 +8,30 @@
 <body>
   <!-- ($5.99 - Jumbo Jack Cheeseburger) ($3.99 - Curly Fries) ($2.99 - Soda) -->
   <form id="order-form">
-    <h2>Jack-In-The-Box Drive Through</h2>
+    <h2>Jack In The Box Drive Through</h2>
     <br><br>
-    <label for="burger">$5.99 - Jumbo Jack Cheeseburger</label><br>
+    <label for="burger">$6 - Jumbo Jack Cheeseburger</label><br>
     <input type="number" name="burger" id="burger" value="burger">
     <br><br>
-    <label for="fries">$3.99 - Curly Fries</label><br>
+    <label for="fries">$4 - Curly Fries</label><br>
     <input type="number" name="fries" id="fries" value="fries">
     <br><br>
-    <label for="soda">$2.99 - Soda</label><br>
+    <label for="soda">$3 - Soda</label><br>
     <input type="number" name="soda" id="soda" value="soda">
     <br><br>
-    <button type="submit" id="btnClick" value="order">Order</button>
+    <button type="submit" id="submit" value="submit">Submit Order</button>
     <br><br>
-  </form>
-  <script>
+    <script>
+    document.getElementById("#button").onclick = (button) => {
       "use strict";
-
-      document.getElementById('btnClick').onclick = () => {
-        
-      };
-      
+      const burger = $("#burger").value * 6;
+      const fries = $("#fries").value * 4;
+      const soda = $("#soda").value * 3;
+      const total = burger + fries + soda;
+      const html = `<p><label>Total: $</label>${total}</p>`
+    };
+    document.write(html)
     </script>
+  </form>
 </body>
 </html>
