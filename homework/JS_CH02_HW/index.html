@@ -21,16 +21,15 @@
     <br><br>
     <button type="submit" id="submit" value="submit">Submit Order</button>
     <br><br>
+    <script>
+      document.getElementById("submit").onclick = () => {
+        const burger = $("burger").value * 6;
+        const fries = $("fries").value * 4;
+        const soda = $("soda").value * 3;
+        const total = burger + fries + soda;
+        document.write("<p><label>Total: $</label>" + total + "</p>")
+      };
+    </script>
   </form>
-  <script>
-    document.getElementById('submit').onclick = () => {
-      const burger = $('burger').value * 6;
-      const fries = $('fries').value * 4;
-      const soda = $('soda').value * 3;
-      const total = burger + fries + soda;
-      const html = `<p><label>Total: $</label>${total}</p>`
-    };
-    document.write(html)
-  </script>
 </body>
 </html>
