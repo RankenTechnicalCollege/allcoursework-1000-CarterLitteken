@@ -6,27 +6,28 @@
   <title>Document</title>
 </head>
 <body>
-  <form id="movie-list">
+  <main>
     <h2>Favorite Movie List</h2>
     <br><br>
     <label for="movie">Enter Your Favorite Movie</label><br>
     <input type="text" id="movie">
     <button type="submit" id="submit" value="submit">Submit</button>
     <br><br>
-  </form>
-  <script>
-    document.getElementById("submit").onclick = () => {
-      "use strict";
-      let movie = document.querySelector("#movie").value;
-      const favoriteMovies = [];
-      favoriteMovies[0] = "The Iron Giant";
-      favoriteMovies[1] = "The Fast and the Furious: Tokyo Drift";
-      favoriteMovies[2] = "Speed Racer";
-      favoriteMovies[favoriteMovies.length] = movie;
-      for ( let i = 0; i < favoriteMovies.length; i++ ) {
-        document.write(`<p>${favoriteMovies[i]}<p>`)
-      }
-    };
-  </script>
+    <p>
+      <script>
+        document.getElementById("submit").onclick = () => {
+          let movie = document.querySelector("#movie").value;
+          const favoriteMovies = [];
+          favoriteMovies[0] = "The Iron Giant";
+          favoriteMovies[1] = "The Fast and the Furious: Tokyo Drift";
+          favoriteMovies[2] = "Speed Racer";
+          favoriteMovies[favoriteMovies.length] = movie;
+          for ( let i = 0; i < favoriteMovies.length; i++ ) {
+            document.writeln(`<p>${favoriteMovies[i]}</p>`);
+          }
+        };
+      </script>
+    </p>
+  </main>
 </body>
 </html>
