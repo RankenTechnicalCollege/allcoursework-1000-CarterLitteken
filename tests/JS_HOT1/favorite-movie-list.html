@@ -9,11 +9,19 @@
   <h2>Favorite Movie List</h2>
   <script>
     "use strict";
-
+    let i = 0;
     const favoriteMovies = [];
     favoriteMovies[0] = "The Iron Giant";
     favoriteMovies[1] = "The Fast and the Furious: Tokyo Drift";
     favoriteMovies[2] = "Speed Racer";
+
+    
+    do {
+      document.write(`<p>${favoriteMovies[i]}<p>`)
+      i++
+    }
+    while(favoriteMovies.length > i)
   </script>
+  <label for="movie"
 </body>
 </html>
