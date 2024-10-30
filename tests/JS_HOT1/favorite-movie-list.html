@@ -6,24 +6,26 @@
   <title>Document</title>
 </head>
 <body>
-  <h2>Favorite Movie List</h2>
-  <script>
-    "use strict";
-    let i = 0;
-    const favoriteMovies = [];
-    favoriteMovies[0] = "The Iron Giant";
-    favoriteMovies[1] = "The Fast and the Furious: Tokyo Drift";
-    favoriteMovies[2] = "Speed Racer";
-
-    
-    do {
-      document.write(`<p>${favoriteMovies[i]}<p>`)
-      i++
-    }
-    while(favoriteMovies.length > i)
-  </script>
-  <br><br>
-  <label for="movie">Enter Your Favorite Movie</label><br>
-  <input type="text" name="movie" id="movie">
+  <form id="movie-list">
+    <h2>Favorite Movie List</h2>
+    <br><br>
+    <label for="movie">Enter Your Favorite Movie</label><br>
+    <input type="text" id="movie">
+    <button type="submit" id="submit" value="submit">Submit</button>
+    <script>
+      document.getElementById("submit").onclick = () => {
+        "use strict";
+        let movie = document.querySelector("#movie").value;
+        const favoriteMovies = [];
+        favoriteMovies[0] = "The Iron Giant";
+        favoriteMovies[1] = "The Fast and the Furious: Tokyo Drift";
+        favoriteMovies[2] = "Speed Racer";
+        favoriteMovies[favoriteMovies.length] = movie;
+        for ( let i = 0; i < favoriteMovies.length; i++ ) {
+          document.write(`<p>${favoriteMovies[i]}<p>`)
+        }
+      };
+    </script>
+  </form>
 </body>
 </html>
