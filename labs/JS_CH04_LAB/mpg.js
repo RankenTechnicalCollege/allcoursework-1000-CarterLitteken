@@ -22,7 +22,7 @@ const processEntries = () => {
     alert(getErrorMsg("Gallons of gas used"));
     focusAndSelect("#gallons");
   } else {
-    $("#mpg").value = (miles / gallongs).toFixed(2);
+    $("#mpg").value = (miles / gallons).toFixed(2);
   }
 };
 
