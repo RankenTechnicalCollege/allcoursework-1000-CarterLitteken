@@ -2,7 +2,7 @@
 
 const $ = selector => document.querySelector(selector);
 
-
+const calculateFV() = () =>
 
 
 
