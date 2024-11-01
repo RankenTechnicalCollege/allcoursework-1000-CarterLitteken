@@ -2,7 +2,12 @@
 
 const $ = selector => document.querySelector(selector);
 
-const calculateFV() = () =>
+const calculateFV() = (investment, rate, years) => {
+  for (let i = 1; i <= years; i++) {
+    futureValue
+  }
+}
+  
 
 
 
