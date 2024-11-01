@@ -1,3 +1,5 @@
+"use strict";
+
 let investment = 0;
 do {
   investment = parseFloat(
@@ -25,4 +27,4 @@ for (let i = 1; i <= years; i++ ) {
 document.write(`<p><label>Investment amount:</label> ${investment}</p>`);
 document.write(`<p><label>Interest rate:</label> ${rate}</p>`);
 document.write(`<p><label>Years:</label> ${years}</p>`);
-document.write(`<p><label>Future Value:</label> ${futureValue}</p>`);
+document.write(`<p><label>Future Value:</label> ${futureValue.toFixed(2)}</p>`);
