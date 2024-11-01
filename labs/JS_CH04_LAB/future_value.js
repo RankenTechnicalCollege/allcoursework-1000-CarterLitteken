@@ -1,5 +1,7 @@
 "use strict";
 
+const $ = selector => document.querySelector(selector);
+
 let investment = 0;
 do {
   investment = parseFloat(
