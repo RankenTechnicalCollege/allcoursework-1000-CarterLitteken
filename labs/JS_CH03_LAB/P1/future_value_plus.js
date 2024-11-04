@@ -35,4 +35,8 @@ document.write(`<h4>Future Value with Yearly Interest<h4>` +
   `<p><label>Interest rate:</label> ${rate}</p>` +
   `<p><label>Years:</label> ${years}</p>` +
   `<p><label>Future Value:</label> ${annualFutureValue.toFixed(2)}</p>`);
-document.write()
+document.write(`<h4>Future Value with Monthly Interest<h4>` +
+  `<p><label>Investment amount:</label> ${investment}</p>` +
+  `<p><label>Interest rate:</label> ${rate}</p>` +
+  `<p><label>Months:</label> ${months}</p>` +
+  `<p><label>Future Value:</label> ${monthlyFutureValue.toFixed(2)}</p>`);
