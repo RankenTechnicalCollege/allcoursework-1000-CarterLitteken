@@ -30,12 +30,12 @@ for (let i = 1; i <= months; i++ ) {
   monthlyFutureValue += monthlyFutureValue * (rate / 12) / 100;
 }
 
-document.write(`<h4>Future Value with Yearly Interest<h4>` +
+document.write(`<h4>Future Value with Yearly Interest</h4>` +
   `<p><label>Investment amount:</label> ${investment}</p>` +
   `<p><label>Interest rate:</label> ${rate}</p>` +
   `<p><label>Years:</label> ${years}</p>` +
   `<p><label>Future Value:</label> ${annualFutureValue.toFixed(2)}</p>`);
-document.write(`<h4>Future Value with Monthly Interest<h4>` +
+document.write(`<h4>Future Value with Monthly Interest</h4>` +
   `<p><label>Investment amount:</label> ${investment}</p>` +
   `<p><label>Interest rate:</label> ${rate}</p>` +
   `<p><label>Months:</label> ${months}</p>` +
