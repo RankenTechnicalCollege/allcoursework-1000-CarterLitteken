@@ -35,7 +35,7 @@ do {
     document.write(`<p><label>Year:</label> ${i} |` +
       ` <label>Interest:</label> ${interest.toFixed(2)} |` +
       ` <label>Value:</label> ${futureValue.toFixed(2)}</p>`);
-  }
+  } 
 
   again = prompt("Repeat entries? (y/n)", "y")
 
