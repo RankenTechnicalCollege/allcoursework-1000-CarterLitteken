@@ -25,9 +25,9 @@
     <script>
       document.getElementById("submit").onclick = () => {
         "use strict";
-        const burger = (parseInt(document.querySelector("#burger").value)) * 6; 
-        const fries = (parseInt(document.querySelector("#fries").value)) * 4;
-        const soda = (parseInt(document.querySelector("#soda").value)) * 3;
+        const burger = parseInt(document.querySelector("#burger").value) * 6; 
+        const fries = parseInt(document.querySelector("#fries").value) * 4;
+        const soda = parseInt(document.querySelector("#soda").value) * 3;
         const total = burger + fries + soda;
         const html = `<p><label>Total: $</label>` + total + `</p>`
         document.write(html)
