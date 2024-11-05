@@ -19,7 +19,9 @@ do {
   else if (grade >= 0 && grade < 60) {
     document.write(`<p>Grade ${grade} = F`);
   }
-
+  else if (grade != 999) {
+    alert("Please enter a valid number");
+  }
 
 }
 while (grade != 999);
