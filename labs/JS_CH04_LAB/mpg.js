@@ -25,7 +25,8 @@ const processEntries = () => {
       alert(getErrorMsg("Must not be equal to 0 or a number below 0\nMiles driven"));
       focusAndSelect("#miles");
     }
-  } else if (isNaN(gallons) || gallons <= 0) {
+  }
+  else if (isNaN(gallons) || gallons <= 0) {
     if (isNaN(gallons)) {
       alert(getErrorMsg("Use numeric characters\nGallons of gas used"));
       focusAndSelect("#gallons");
@@ -35,7 +36,8 @@ const processEntries = () => {
       focusAndSelect("#gallons");
     }
     
-  } else {
+  }
+  else {
     $("#mpg").value = (miles / gallons).toFixed(2);
   }
 };

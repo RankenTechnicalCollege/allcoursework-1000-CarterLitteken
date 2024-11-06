@@ -10,12 +10,32 @@ const calculateFV = (investment, rate, years) => {
   return futureValue;
 };
 
+const focusAndSelect = selector => {
+  const elem = $(selector);
+  elem.focus();
+  elem.select();
+};
+
 const processEntries = () => {
   const investment = parseFloat($("#investment").value);
   const rate = parseFloat($("#rate").value);
   const years = parseFloat($("#years").value);
 
-  $("#futureValue").value = calculateFV(investment, rate, years).toFixed(2);
+  if (investment <= 0 || investment > 100000) {
+    alert("Investment must be greater than 0 and less then or equal to 100,000.");
+    focusAndSelect("#investment");
+  }
+  else if (rate <= 0 || rate > 15) {
+    alert("Interest rate must be greater than 0 and less then or equal to 15.");
+    focusAndSelect("#rate");
+  }
+  else if (years <= 0 || years > 50) {
+    alert("Years must be greater than 0 and less then or equal to 50.");
+    focusAndSelect("#years");
+  }
+  else {
+    $("#futureValue").value = calculateFV(investment, rate, years).toFixed(2);
+  }
 };
 
 document.addEventListener("DOMContentLoaded", () => {
