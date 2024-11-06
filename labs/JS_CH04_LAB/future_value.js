@@ -20,18 +20,22 @@ const processEntries = () => {
   const investment = parseFloat($("#investment").value);
   const rate = parseFloat($("#rate").value);
   const years = parseFloat($("#years").value);
+  var error = null;
 
-  if (investment <= 0 || investment > 100000) {
-    alert("Investment must be greater than 0 and less then or equal to 100,000.");
+  if (isNaN(investment) || investment <= 0 || investment > 100000) {
+    error = "Investment must be greater than 0 and less then or equal to 100,000.";
     focusAndSelect("#investment");
   }
-  else if (rate <= 0 || rate > 15) {
-    alert("Interest rate must be greater than 0 and less then or equal to 15.");
+  else if (isNaN(rate) || rate <= 0 || rate > 15) {
+    error = "Interest rate must be greater than 0 and less then or equal to 15.";
     focusAndSelect("#rate");
   }
-  else if (years <= 0 || years > 50) {
-    alert("Years must be greater than 0 and less then or equal to 50.");
+  else if (isNaN(years) || years <= 0 || years > 50) {
+    error = "Years must be greater than 0 and less then or equal to 50.";
     focusAndSelect("#years");
+  }
+  if (error != null) {
+    alert(error.valueOf())
   }
   else {
     $("#futureValue").value = calculateFV(investment, rate, years).toFixed(2);
