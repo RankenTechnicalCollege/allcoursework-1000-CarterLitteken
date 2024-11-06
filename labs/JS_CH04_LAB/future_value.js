@@ -3,13 +3,26 @@
 const $ = selector => document.querySelector(selector);
 
 const calculateFV = (investment, rate, years) => {
-  futureValue = investment;
+  let futureValue = investment;
   for (let i = 1; i <= years; i++) {
     futureValue += futureValue * rate / 100;
   }
-  return futureValue.toFixed(2);
+  return futureValue;
 };
-  
+
+const processEntries = () => {
+  const investment = parseFloat($("#investment").value);
+  const rate = parseFloat($("#rate").value);
+  const years = parseFloat($("#years").value);
+
+  $("#futureValue").value = calculateFV(investment, rate, years).toFixed(2);
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  $("#calculate").addEventListener("click", processEntries);
+  $("#investment").focus();
+});
+
 
 
 
