@@ -20,16 +20,16 @@
     <label for="soda">$3 - Soda</label><br>
     <input type="number" name="soda" id="soda" value="soda">
     <br><br>
-    <button type="submit" id="submit" value="submit">Submit Order</button>
+    <button type="button" id="submit" value="submit">Submit Order</button>
     <br><br>
     <script>
-      document.getElementById("submit").onclick = () => {
-        "use strict";
+      "use strict";
+      document.querySelector("#submit").onclick = () => {
         const burger = parseInt(document.querySelector("#burger").value) * 6; 
         const fries = parseInt(document.querySelector("#fries").value) * 4;
         const soda = parseInt(document.querySelector("#soda").value) * 3;
         const total = burger + fries + soda;
-        const html = `<p><label>Total: $</label>` + total + `</p>`
+        const html = `<p><label>Total: $</label>${total}</p>`
         document.write(html)
       };
     </script>
