@@ -15,11 +15,17 @@ const processEntries = () => {
   const miles = parseFloat($("#miles").value);
   const gallons = parseFloat($("#gallons").value);
 
-  if (isNaN(miles) || miles <= 0) {
-    alert(getErrorMsg("Miles driven"));
+  if (isNaN(miles)) {
+    alert(getErrorMsg("Use numbers not words"));
     focusAndSelect("#miles");
-  } else if (isNaN(gallons) || gallons <= 0) {
-    alert(getErrorMsg("Gallons of gas used"));
+  } else if (miles <= 0) {
+    alert(getErrorMsg("No 0 or numbers below"));
+    focusAndSelect("#miles");
+  } else if (isNaN(gallons)) {
+    alert(getErrorMsg("Use numbers not words"));
+    focusAndSelect("#gallons");
+  } else if (gallons <= 0) {
+    alert(getErrorMsg("No 0 or numbers below"));
     focusAndSelect("#gallons");
   } else {
     $("#mpg").value = (miles / gallons).toFixed(2);
