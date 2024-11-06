@@ -17,21 +17,21 @@ const processEntries = () => {
 
   if (isNaN(miles) || miles <= 0) {
     
-    if (miles <= 0) {
-      alert(getErrorMsg("Use numeric characters"));
+    if (isNaN(miles)) {
+      alert(getErrorMsg("Use numeric characters\n"));
       focusAndSelect("#miles");
     }
     else {
-      alert(getErrorMsg("No 0 or number below 0"));
+      alert(getErrorMsg("Must not be equal to 0 or a number below 0\n"));
       focusAndSelect("#miles");
     }
   } else if (isNaN(gallons) || gallons <= 0) {
     if (isNaN(gallons)) {
-      alert(getErrorMsg("Use numeric characters"));
+      alert(getErrorMsg("Use numeric characters\n"));
       focusAndSelect("#gallons");
     }
     else {
-      alert(getErrorMsg("No 0 or number below 0"));
+      alert(getErrorMsg("Must not be equal to 0 or a number below 0\n"));
       focusAndSelect("#gallons");
     }
     
