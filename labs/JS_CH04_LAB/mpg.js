@@ -44,3 +44,16 @@ document.addEventListener("DOMContentLoaded", () => {
   $("#calculate").addEventListener("click", processEntries);
   $("#miles").focus();
 });
+
+const clearEntries = () => {
+  $("#miles").value = null;
+  $("#gallons").value = null;
+  $("#mpg").value = null;
+  focusAndSelect("#miles")
+};
+  
+
+document.addEventListener("DOMContentLoaded", () => {
+  $("#clear").addEventListener("click", clearEntries);
+  $("#miles").focus();
+});
