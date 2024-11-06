@@ -22,15 +22,16 @@
     <br><br>
     <button type="button" id="submit" value="submit">Submit Order</button>
     <br><br>
+    <p id="total">Total:</p>
     <script>
       "use strict";
-      document.querySelector("#submit").onclick = () => {
+      document.getElementById("submit").onclick = () => {
         const burger = parseInt(document.querySelector("#burger").value) * 6; 
         const fries = parseInt(document.querySelector("#fries").value) * 4;
         const soda = parseInt(document.querySelector("#soda").value) * 3;
         const total = burger + fries + soda;
-        const html = `<p><label>Total: $</label>${total}</p>`
-        document.write(html)
+        const html = `<p><label>Total: $</label>${total}</p>`;
+        document.getElementById("total").innerHTML = html;
       };
     </script>
   </form>
