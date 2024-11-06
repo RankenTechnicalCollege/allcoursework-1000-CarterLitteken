@@ -15,18 +15,26 @@ const processEntries = () => {
   const miles = parseFloat($("#miles").value);
   const gallons = parseFloat($("#gallons").value);
 
-  if (isNaN(miles)) {
-    alert(getErrorMsg("Use numbers not words"));
-    focusAndSelect("#miles");
-  } else if (miles <= 0) {
-    alert(getErrorMsg("No 0 or numbers below"));
-    focusAndSelect("#miles");
-  } else if (isNaN(gallons)) {
-    alert(getErrorMsg("Use numbers not words"));
-    focusAndSelect("#gallons");
-  } else if (gallons <= 0) {
-    alert(getErrorMsg("No 0 or numbers below"));
-    focusAndSelect("#gallons");
+  if (isNaN(miles) || miles <= 0) {
+    
+    if (miles <= 0) {
+      alert(getErrorMsg("Use numeric characters"));
+      focusAndSelect("#miles");
+    }
+    else {
+      alert(getErrorMsg("No 0 or number below 0"));
+      focusAndSelect("#miles");
+    }
+  } else if (isNaN(gallons) || gallons <= 0) {
+    if (isNaN(gallons)) {
+      alert(getErrorMsg("Use numeric characters"));
+      focusAndSelect("#gallons");
+    }
+    else {
+      alert(getErrorMsg("No 0 or number below 0"));
+      focusAndSelect("#gallons");
+    }
+    
   } else {
     $("#mpg").value = (miles / gallons).toFixed(2);
   }
