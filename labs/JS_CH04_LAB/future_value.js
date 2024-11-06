@@ -15,7 +15,7 @@ const focusAndSelect = selector => {
   elem.focus();
   elem.select();
 };
-/*
+
 const processEntries = () => {
   const investment = parseFloat($("#investment").value);
   const rate = parseFloat($("#rate").value);
@@ -41,9 +41,9 @@ const processEntries = () => {
     $("#futureValue").value = calculateFV(investment, rate, years).toFixed(2);
   }
 };
-*/
+
 document.addEventListener("DOMContentLoaded", () => {
-  $("#calculate").addEventListener("click", function () {
+  $("#calculate").addEventListener("click", processEntries /*function () {
     const investment = parseFloat($("#investment").value);
     const rate = parseFloat($("#rate").value);
     const years = parseFloat($("#years").value);
@@ -68,6 +68,6 @@ document.addEventListener("DOMContentLoaded", () => {
     else {
       $("#futureValue").value = calculateFV(investment, rate, years).toFixed(2);
     }
-  }());
+  }()*/);
   $("#investment").focus();
 });
