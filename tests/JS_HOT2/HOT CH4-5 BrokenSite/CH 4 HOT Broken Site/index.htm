@@ -34,7 +34,7 @@
          <label for="item3">Enter The Gungeon ($13.49)</label>
          <input type="checkbox" id="item4" value="499" />
          <label for="item4">Hover Junkers ($4.99)</label>
-         <input type="checkbox" id="item5" value="599" />
+         <input type="checkbox" id="item5" value="899" />
          <label for="item5">Good Robot ($8.99)</label>
          <input type="button" value="Calculate" id="sButton" />
       </form>
@@ -60,13 +60,17 @@
       </table>
    </article>
    <script>
-	  "use strict";
-	  // function to add values of selected check boxes and display total
+      "use strict";
+	   // function to add values of selected check boxes and display total
+
+      const $ = selector => document.querySelector(selector);
+
       function calcTotal() {
          
          var itemTotal = 0;
          var tax = 0;
          var totalWithTax = 0;
+         const items = [];
          items = document.getElementsByTagName("input");
          var cells = document.getElementsByTagName("td");
          for (var i = 0; i < 3; i++) {
@@ -83,7 +87,7 @@
       
       // add event listener to Submit button
       var submitButton = document.getElementById("sButton");
-      submitButton.addEventListener("click, calcTotal); 
+      submitButton.addEventListener("click", calcTotal); 
     
    </script>
 </body>
