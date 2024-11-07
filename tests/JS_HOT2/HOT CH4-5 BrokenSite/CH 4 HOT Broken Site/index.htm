@@ -71,12 +71,14 @@
          // declare items variable
          var items = document.getElementsByTagName("input");
          var cells = document.getElementsByTagName("td");
+         // 
          for (var i = 0; i < 3; i++) {
             if (items[i].checked) {
                itemTotal += (items[i].value * 1);
             }
          }
-         tax = itemTotal * 0.1;
+         // make tax 5% of the itemTotal
+         tax = itemTotal * 0.05;
          // use same variable for all instances of tax 
          totalWithTax = itemTotal + tax;
          cells[1].innerHTML = (itemTotal / 100).toFixed(2);
