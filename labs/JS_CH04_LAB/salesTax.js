@@ -7,7 +7,8 @@ const calculateTax = () => {
   const taxRate = parseFloat($("#taxRate").value);
   const salesTax = (subtotal * taxRate) / 100;
   const total = subtotal + salesTax;
-  
-  
+
+  $("#salesTax").value = salesTax.toFixed(2);
+  $("#total").value = total.toFixed(2);
 
 };
