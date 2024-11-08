@@ -8,7 +8,11 @@ const calculateTax = () => {
   const salesTax = (subtotal * taxRate) / 100;
   const total = subtotal + salesTax;
 
-  $("#salesTax").value = salesTax.toFixed(2);
-  $("#total").value = total.toFixed(2);
+  $("salesTax").value = salesTax.toFixed(2);
+  $("total").value = total.toFixed(2);
 
 };
+
+document.addEventListener("DOMContentLoaded", () =>{
+  $("#calculate").addEventListener("click", processEntries);
+});
