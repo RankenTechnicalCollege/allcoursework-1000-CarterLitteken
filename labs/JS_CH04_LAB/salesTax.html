@@ -12,32 +12,23 @@
     <h1>Sales Tax Calculator</h1>
   </header>
   <main>
+    <form id="sales-calc"></form>
     <h2>Enter Subtotal and Tax Rate and click "Calculate"</h2>
-
-    <div>
-      <label for="subtotal">Subtotal:</label>
-      <input type="text" id="subtotal">
-    </div>
-
-    <div>
-      <label for="taxRate">Tax Rate:</label>
-      <input type="text" id="taxRate">
-    </div>
-
-    <div>
-      <label for="salesTax">Sales Tax:</label>
-      <output id="salesTax"></output>
-    </div>
-
-    <div>
-      <label for="total">Total:</label>
-      <output id="total"></output>
-    </div>
-
-    <div>
-      <button type="button" id="calculate">Calculate</button>
-      <button type="button" id="clear">Clear</button>
-    </div>
+    <br><br>
+    <label for="subtotal">Subtotal:</label>
+    <input type="text" id="subtotal">
+    <br><br>
+    <label for="taxRate">Tax Rate:</label>
+    <input type="text" id="taxRate">
+    <br><br>
+    <label for="salesTax">Sales Tax:</label>
+    <output id="salesTax" name="salesTax" for="subtotal taxRate"></output>
+    <br><br>
+    <label for="total">Total:</label>
+    <output id="total" name="total" for="subtotal salesTax"></output>
+    <br><br>
+    <button type="button" id="calculate">Calculate</button>
+    <button type="button" id="clear">Clear</button>
   </main>
   <script src="salesTax.js"></script>
   <footer>

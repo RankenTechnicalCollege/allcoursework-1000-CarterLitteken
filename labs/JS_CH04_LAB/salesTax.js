@@ -7,7 +7,7 @@ const calculateTax = () => {
   const taxRate = parseFloat($("#taxRate").value);
   const salesTax = (subtotal * taxRate) / 100;
   const total = subtotal + salesTax;
-
+  
   
 
 };
