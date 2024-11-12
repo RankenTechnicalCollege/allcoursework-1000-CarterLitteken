@@ -44,4 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
   $("#clear").addEventListener("click", clearEntries);
 });
 
-$("#subtotal").addEventListener(onfocus,)
+/*
+Add event handlers for the /onfocus\ events of the Subtotal and Tax Rate text boxes.
+Each handler should clear the data from the text box.
+*/
