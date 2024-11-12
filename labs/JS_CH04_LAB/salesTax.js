@@ -31,3 +31,11 @@ document.addEventListener("DOMContentLoaded", () => {
   $("#subtotal").focus();
   $("#calculate").addEventListener("click", calculateTax);
 });
+
+const clearEntries = () => {
+  $("#subtotal").value = null;
+  $("#taxRate").value = null;
+  $("#salesTax").value = null;
+  $("#subtotal").value = null;
+  focusAndSelect("#subtotal");
+};
