@@ -14,9 +14,10 @@ const calculateTax = () => {
   else if (taxRate <= 0 || taxRate > 12) {
     alert("Tax Rate must be a number greater then 0 and less than or equal to 12.");
   }
-
-  $("#salesTax").value = salesTax.toFixed(2);
-  $("#total").value = total.toFixed(2);
+  else {
+    $("#salesTax").value = salesTax.toFixed(2);
+    $("#total").value = total.toFixed(2);
+  }
 
 };
 
