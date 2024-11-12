@@ -14,5 +14,5 @@ const calculateTax = () => {
 };
 
 document.addEventListener("DOMContentLoaded", () =>{
-  $("#calculate").addEventListener("click", processEntries);
+  $("#calculate").addEventListener("click", calculateTax);
 });
