@@ -21,7 +21,7 @@ const calculateTax = () => {
 
 };
 
-document.addEventListener("DOMContentLoaded", () =>{
+document.addEventListener("DOMContentLoaded", () => {
   $("#calculate").addEventListener("click", calculateTax);
   $("#subtotal").focus();
 });
