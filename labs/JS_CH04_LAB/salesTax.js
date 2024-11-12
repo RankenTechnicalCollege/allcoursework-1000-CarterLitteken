@@ -9,7 +9,10 @@ const calculateTax = () => {
   const total = subtotal + salesTax;
 
   if (subtotal <= 0 || subtotal > 10000) {
-    alert("Subtotal must be a positive number ")
+    alert("Subtotal must be a number greater then 0 and less than or equal to 10,000.");
+  }
+  else if (taxRate <= 0 || taxRate > 12) {
+    alert("Tax Rate must be a number greater then 0 and less than or equal to 12.");
   }
 
   $("#salesTax").value = salesTax.toFixed(2);
