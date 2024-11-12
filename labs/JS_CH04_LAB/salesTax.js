@@ -57,8 +57,5 @@ const clearTaxRate = () => {
 };
 
 $("#subtotal").addEventListener("focus", clearSubtotal);
-/*
-document.addEventListener("DOMContentLoaded", () => {
-  $("#subtotal").addEventListener("focus", clearSubtotal);
-});
-*/
+
+$("#taxRate").addEventListener("focus", clearTaxRate);
