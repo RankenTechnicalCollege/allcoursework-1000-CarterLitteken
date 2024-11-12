@@ -2,6 +2,12 @@
 
 const $ = selector => document.querySelector(selector);
 
+const focusAndSelect = selector => {
+  const elem = $(selector);
+  elem.focus();
+  elem.select();
+};
+
 const calculateTax = () => {
   const subtotal = parseFloat($("#subtotal").value);
   const taxRate = parseFloat($("#taxRate").value);
