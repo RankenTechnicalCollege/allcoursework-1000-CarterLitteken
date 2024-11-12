@@ -44,7 +44,4 @@ document.addEventListener("DOMContentLoaded", () => {
   $("#clear").addEventListener("click", clearEntries);
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  $("#subtotal").addEventListener(onfocus,)
-
-});
+$("#subtotal").addEventListener(onfocus,)
