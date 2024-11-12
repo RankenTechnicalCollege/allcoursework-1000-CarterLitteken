@@ -36,6 +36,10 @@ const clearEntries = () => {
   $("#subtotal").value = null;
   $("#taxRate").value = null;
   $("#salesTax").value = null;
-  $("#subtotal").value = null;
+  $("#total").value = null;
   focusAndSelect("#subtotal");
 };
+
+document.addEventListener("DOMContentLoaded", () => {
+  $("#clear").addEventListener("click", clearEntries);
+});
