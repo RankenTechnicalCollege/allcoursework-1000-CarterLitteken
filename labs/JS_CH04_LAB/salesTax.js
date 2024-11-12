@@ -24,10 +24,10 @@ const calculateTax = () => {
     $("#salesTax").value = salesTax.toFixed(2);
     $("#total").value = total.toFixed(2);
   }
-
+  $("#subtotal").focus();
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  $("#calculate").addEventListener("click", calculateTax);
   $("#subtotal").focus();
+  $("#calculate").addEventListener("click", calculateTax);
 });
