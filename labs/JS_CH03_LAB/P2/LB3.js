@@ -6,10 +6,9 @@ const calcBMI = () => {
   const weight = parseFloat($("#weight").value);
   const height = parseFloat($("#height").value);
 
-  const bmi = (weight * 703) / (height * height);
+  let bmi = (weight * 703) / (height * height);
 
-  $("#bmi").value = bmi.toFixed(1);
-
+  $("#bmi").value = bmi.toFixed(2);
 };
 
 document.addEventListener("DOMContentLoaded", () => {
