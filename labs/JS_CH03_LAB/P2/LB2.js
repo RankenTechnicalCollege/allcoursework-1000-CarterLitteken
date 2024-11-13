@@ -9,13 +9,17 @@ const calculate = () => {
 
   if (price <= 25.00) {
     fee = 1.50;
+    total = price + fee;
+    alert("Total cost with shipping and handling: " + total.toFixed(2));
   }
   else {
     fee = (price * 10) / 100;
+    total = price + fee;
+    alert("Total cost with shipping and handling: " + total.toFixed(2));
   }
 
   total = price + fee;
-  alert("Total cost with shipping and handling: " + total);
+  alert("Total cost with shipping and handling: ");
 
 };
 
