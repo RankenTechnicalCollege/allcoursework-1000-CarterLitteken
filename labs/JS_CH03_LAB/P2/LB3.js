@@ -13,5 +13,5 @@ const calcBMI = () => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  $("#calcBMI").addEventListener("click", calcBMI);
+  $("#calculate").addEventListener("click", calcBMI);
 });
