@@ -8,7 +8,7 @@ const calcBMI = () => {
 
   const bmi = (weight * 703) / (height * height);
 
-  $("#result").innerHTML = bmi.toFixed(1);
+  $("#result").value = bmi.toFixed(1);
 };
 
 document.addEventListener("DOMContentLoaded", () => {
