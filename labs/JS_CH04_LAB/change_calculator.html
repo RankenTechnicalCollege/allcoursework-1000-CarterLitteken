@@ -13,27 +13,49 @@
   </header>
   <main>
     <div class="container">
-      <div class="change-group t">
-        <label for="change">Enter amount of change due (0-99):</label>
-        <input type="text" id="change">
-        <button type="button" id="calculate">Calculate</button>
+      <div class="row">
+        <div class="col-4 text-end">
+          <label for="change" class="form-label">Enter amount of change due (0-99):</label>
+        </div>
+        <div class="col-2 border border-1 border-black">
+          <input type="text" class="border border-0" id="change">
+        </div>
+        <div class="col-4 text-start">
+          <button type="button" id="calculate">Calculate</button>
+        </div>
       </div>
       <br>
-      <div class="change-group">
-        <label for="quarters">Quarters:</label>
-        <output id="quarters" name="quarters"></output>
+      <div class="row">
+        <div class="col-4 text-end">
+          <label for="quarters">Quarters:</label>
+        </div>
+        <div class="col-2 bg-secondary bg-opacity-10 border border-1 border-secondary border-opacity-25">
+        <output class="form-label text-start" id="quarters" name="quarters"></output>
+        </div>
       </div>
-      <div class="change-group">
-        <label for="dimes">Dimes:</label>
-        <output id="dimes" name="dimes"></output>
+      <div class="row">
+        <div class="col-4 text-end">
+          <label for="dimes">Dimes:</label>
+        </div>
+        <div class="col-2 bg-secondary bg-opacity-10 border border-1 border-secondary border-opacity-25">
+          <output class="form-label text-start" id="dimes" name="dimes"></output>
+        </div>
       </div>
-      <div class="change-group">
-        <label for="nickles">Nickels:</label>
-        <output id="nickles" name="nickles"></output>
+      <div class="row">
+        <div class="col-4 text-end">
+          <label for="nickles">Nickels:</label>
+        </div>
+        <div class="col-2 bg-secondary bg-opacity-10 border border-1 border-secondary border-opacity-25">
+          <output class="form-label text-start" id="nickles" name="nickles"></output>
+        </div>
       </div>
-      <div class="change-group">
-        <label for="pennies">Pennies:</label>
-        <output id="pennies" name="pennies"></output>
+      <div class="row">
+        <div class="col-4 text-end">
+          <label for="pennies">Pennies:</label>
+        </div>
+        <div class="col-2 bg-secondary bg-opacity-10 border border-1 border-secondary border-opacity-25">
+          <output class="form-label text-start" id="pennies" name="pennies"></output>
+        </div>
       </div>
     </div>
   </main>
