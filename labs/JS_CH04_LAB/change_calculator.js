@@ -9,30 +9,29 @@ const makeChange = () => {
   let nickles = 0;
   let pennies = 0;
 
-  if ( !isNaN(change) || change < 0 || change > 99) {
+  if (change < 0 || change > 99) {
     alert("Enter number between 0 and 99");
   }
   else {
     do {
-      change -= 25;
-      quarters++;
+      if (change >= 25) {
+        change -= 25;
+        quarters++;
+      }
+      else if (change < 25 && change >= 10) {
+        change -= 10;
+        dimes++;
+      }
+      else if (change < 10 && change >= 5) {
+        change -= 5;
+        nickles++;
+      }
+      else if (change < 5 && change >= 1) {
+        change -= 1;
+        pennies++;
+      }
     }
-    while (change >= 25);
-    do {
-      change -= 10;
-      dimes++;
-    }
-    while (change >= 10);
-    do {
-      change -= 5;
-      nickles++;
-    }
-    while (change >= 5);
-    do {
-      change -= 1;
-      pennies++;
-    }
-    while (change >= 1);
+    while (change > 0);
 
     $("#quarters").value = quarters;
     $("#dimes").value = dimes;
