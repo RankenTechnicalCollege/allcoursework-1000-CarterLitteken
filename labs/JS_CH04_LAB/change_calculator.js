@@ -8,3 +8,12 @@ const focusAndSelect = selector => {
   elem.select();
 };
 
+const makeChange = () => {
+  const change = parseInt($("#change").value);
+
+  if (change < 0 || change > 99) {
+    alert("Enter number between 0 and 99");
+  }
+  
+
+};
