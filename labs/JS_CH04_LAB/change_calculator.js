@@ -2,12 +2,6 @@
 
 const $ = selector => document.querySelector(selector);
 
-const focusAndSelect = selector => {
-  const elem = $(selector);
-  elem.focus();
-  elem.select();
-};
-
 const makeChange = () => {
   let change = parseInt($("#change").value);
   let quarters = 0;
@@ -15,7 +9,7 @@ const makeChange = () => {
   let nickles = 0;
   let pennies = 0;
 
-  if (change < 0 || change > 99) {
+  if ( !isNaN(change) || change < 0 || change > 99) {
     alert("Enter number between 0 and 99");
   }
   else {
@@ -40,7 +34,14 @@ const makeChange = () => {
     }
     while (change >= 1);
 
-    $("#quarters")
+    $("#quarters").value = quarters;
+    $("#dimes").value = dimes;
+    $("#nickles").value = nickles;
+    $("#pennies").value = pennies;
   }
 
 };
+
+document.addEventListener("DOMContentLoaded", () => {
+  $("#calculate").addEventListener("click", makeChange);
+});
