@@ -38,5 +38,5 @@ const calcTax = () => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  $("#calculate").addEventListener("click", makeChange);
+  $("#calculate").addEventListener("click", calcTax);
 });
