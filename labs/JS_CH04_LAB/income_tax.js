@@ -36,3 +36,7 @@ const calcTax = () => {
   $("#owed").value = owed.toFixed(2);
 
 };
+
+document.addEventListener("DOMContentLoaded", () => {
+  $("#calculate").addEventListener("click", makeChange);
+});
