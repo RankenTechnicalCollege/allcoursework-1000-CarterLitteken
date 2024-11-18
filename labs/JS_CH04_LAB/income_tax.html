@@ -17,10 +17,25 @@
       </div>
       <div class="row">
         <div class="col">
-          <label class="form-label" for="income"
+          <label for="income" class="form-label">Enter taxable income:</label>
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" id="income">
+        </div>
+        <div class="col">
+          <button type="button" class="btn" id="calculate">Calculate</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="tax" class="form-label">Income tax owed:</label>
+        </div>
+        <div class="col">
+          <output class="form-label" id="tax"></output>
         </div>
       </div>
     </div>
+    <script src="income_tax.js"></script>
   </main>
 </body>
 </html>
