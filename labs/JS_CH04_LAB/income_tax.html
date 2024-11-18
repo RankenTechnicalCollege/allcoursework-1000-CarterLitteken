@@ -10,27 +10,27 @@
 <body>
   <main>
     <div class="container">
-      <div class="row">
-        <div class="col">
+      <div class="row align-items-center">
+        <div class="col-5 my-1 text-end">
           <h1>Income Tax Calculator</h1>
         </div>
       </div>
-      <div class="row">
-        <div class="col">
+      <div class="row align-items-center">
+        <div class="col-3 my-1 text-end">
           <label for="income" class="form-label">Enter taxable income:</label>
         </div>
-        <div class="col">
-          <input type="text" class="form-control" id="income">
+        <div class="col-3 my-1 p-0 border border-2 border-black">
+          <input type="text" class="form-control border border-0" id="income">
         </div>
-        <div class="col">
+        <div class="col-3 my-1">
           <button type="button" class="btn" id="calculate">Calculate</button>
         </div>
       </div>
-      <div class="row">
-        <div class="col">
+      <div class="row align-items-center">
+        <div class="col-3 my-1 text-end">
           <label for="owed" class="form-label">Income tax owed:</label>
         </div>
-        <div class="col">
+        <div class="col-3 my-1 pt-1 bg-secondary bg-opacity-10 border border-1 border-secondary border-opacity-25">
           <output class="form-label" id="owed"></output>
         </div>
       </div>
