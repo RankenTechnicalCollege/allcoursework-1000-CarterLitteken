@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (errorMessage = "") {
             $("#email_form").submit();
         } else {
-            alert(errorMessage);            
+            alert(errorMessage);
         }
     });
 
