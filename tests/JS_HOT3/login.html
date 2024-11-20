@@ -9,7 +9,7 @@
 </head>
 <body>
   <main>
-    <form id="login_form" name="login_form" class="container text-center">
+    <form id="login_form" name="login_form" class="container text-center" method="dialog">
       <div class="row align-items-center justify-content-center">
         <div class="col-4 my-1 p-0 border border-2 border-black text-center">
           <input type="email" id="email" name="email" class="form-control" autocomplete="email">
@@ -23,6 +23,11 @@
       <div>
         <button type="submit" id="login" class="btn btn-primary">Login</button>
       </div>
+      <div>
+        <output id="errorMsg" class="form-label text-danger"></output>
+        <output id="successMsg" class="form-label text-success"></output>
+      </div>
+      <script src="login.js"></script>
     </form>
   </main>
 </body>
