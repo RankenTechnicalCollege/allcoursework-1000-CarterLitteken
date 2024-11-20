@@ -48,9 +48,13 @@ document.addEventListener("DOMContentLoaded", () => {
   
     if (errorMsg != "") {
       $("#errorMsg").value = errorMsg;
+      $("#email").value = "";
+      $("#password").value = "";
     }
     else {
       $("#successMsg").value = successMsg;
+      $("#email").value = "";
+      $("#password").value = "";
     }
   
   });
