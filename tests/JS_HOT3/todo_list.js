@@ -7,6 +7,9 @@ const todo = () => {
   const para = document.createElement("li")
   const node = document.createTextNode(task);
   para.appendChild(node)
+
+  const element = document.getElementById("list");
+  element.appendChild(para)
 };
 
 document.addEventListener("DOMContentLoaded", () => {
