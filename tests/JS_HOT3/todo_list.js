@@ -21,11 +21,11 @@ const todo = () => {
   
 };
 
-
 document.addEventListener("DOMContentLoaded", () => {
   $("#add").addEventListener("click", todo);
   for (i = 0; i < task_num, i++;) {
-    
+    const task_id = "#task" + i;
+    const btn_id = "#btn" + i;
+
   }
-  
 });
