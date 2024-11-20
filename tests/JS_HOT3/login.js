@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
       $("#errorMsg").value = errorMsg;
     }
     else {
-      $("$successMsg").value = successMsg;
+      $("#successMsg").value = successMsg;
     }
   
   });
