@@ -43,6 +43,7 @@ const processEntries = () => {
 };
 */
 document.addEventListener("DOMContentLoaded", () => {
+  
   $("#calculate").addEventListener("click", (investment, rate, years) => {
     let futureValue = investment;
     for (let i = 1; i <= years; i++) {
@@ -50,6 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     return futureValue;
   });
+
   $("#calculate").addEventListener("click", () => {
     const investment = parseFloat($("#investment").value);
     const rate = parseFloat($("#rate").value);
