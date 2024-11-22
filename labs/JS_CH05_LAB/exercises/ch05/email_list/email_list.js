@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     
         // submit the form if error message is an empty string
-        if (errorMessage = "") {
+        if (errorMessage == "") {
             $("#email_form").submit();
         } else {
             alert(errorMessage);
