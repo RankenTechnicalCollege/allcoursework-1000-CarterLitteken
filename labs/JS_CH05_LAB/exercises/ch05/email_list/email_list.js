@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (email2 == "") { 
             errorMessage += "Second email is required.\n";
         }
-    
+        
         if (email1 != email2) { 
             errorMessage += "Both emails must match.\n";
         }
