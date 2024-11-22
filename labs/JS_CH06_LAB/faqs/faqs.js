@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const aElements = faqs.querySelectorAll("#faqs h2 a");
     
     // attach event handler for each h2 tag	    
-    for (let aElement of aElement) {
+    for (let aElement of aElements) {
         aElement.addEventListener("click", toggle);
     }
     // set focus on first h2 tag's <a> tag
