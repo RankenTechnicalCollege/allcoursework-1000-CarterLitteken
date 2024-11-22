@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // create an error message and set it to an empty string
         let errorMessage = "";
 
-        // check user entries - add text to error message if invalid
+        // check user entries - a dd text to error message if invalid
         if (email1.value == "") { 
             errorMessage += "First email is required.\n";
         }
