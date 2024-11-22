@@ -23,7 +23,7 @@ const processEntries = () => {
         alert(getErrorMsg("Gallons of gas used"));
         focusAndSelect("#gallons");
     } else {
-        $("#mpg").value = calculateMpg(miles / gallons);
+        $("#mpg").value = calculateMPG(miles, gallons);
     }
 };
 
