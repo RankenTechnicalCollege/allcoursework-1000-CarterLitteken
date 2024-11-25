@@ -31,6 +31,7 @@ textarea {
 }
 span {
     color: red;
+    vertical-align: top;
 }
 .messages {
     border: 3px solid red;
