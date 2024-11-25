@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Convert Temperatures</title>
+  <link rel="stylesheet" href="temp_convert.css">
 </head>
 <body>
   <main>
@@ -12,6 +13,8 @@
       <div>
         <input type="radio" name="fromTo" id="toCelsius" 
           value="text">Fahrenheit to Celsius
+      </div>
+      <div>
         <input type="radio" name="fromTo" id="toFahrenheit"
           value="text">Celsius to Fahrenheit
       </div>
@@ -21,13 +24,17 @@
       </div>
       <div>
         <label for="resultDegrees"></label>
-        <input type="text" name="resultDegrees" id="resultDegrees">
+        <input type="text" name="resultDegrees" id="resultDegrees" disabled>
       </div>
       <div>
         <label>&nbsp;</label>
-        <input type="button" id="convert" value="Register">
+        <input type="button" id="convert" value="Convert">
+      </div>
+      <div>
+        <output
       </div>
     </form>
   </main>
+  <script src="temp_convert.js"></script>
 </body>
 </html>
