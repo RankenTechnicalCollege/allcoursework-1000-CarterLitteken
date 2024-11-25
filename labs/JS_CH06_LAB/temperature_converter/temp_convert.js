@@ -8,5 +8,5 @@ const toFahrenheit = $("#toFahrenheit");
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    
+  
 });
