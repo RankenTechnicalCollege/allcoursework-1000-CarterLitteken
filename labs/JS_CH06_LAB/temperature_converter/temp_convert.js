@@ -9,7 +9,6 @@ const resultDegrees = $("#resultDegrees");
 
 document.addEventListener("DOMContentLoaded", () => {
 
-
     $("#toCelsius").addEventListener("change", () => {
 		if (toCelsius.checked == true){
 			enterDegrees.previousElementSibling.textContent = "Enter F degrees:";
@@ -19,4 +18,14 @@ document.addEventListener("DOMContentLoaded", () => {
 			resultDegrees.previousElementSibling.textContent = "Degrees Fahrenheit:";
 		}
     });
+
+	$("#toFahrenheit").addEventListener("change", () => {
+		if (toFahrenheit.checked == true){
+			enterDegrees.previousElementSibling.textContent = "Enter C degrees:";
+			resultDegrees.previousElementSibling.textContent = "Degrees Fahrenheit:";
+		} else {
+			enterDegrees.previousElementSibling.textContent = "Enter F degrees:";
+			resultDegrees.previousElementSibling.textContent = "Degrees Celsius:";
+		}
+	});
 });
