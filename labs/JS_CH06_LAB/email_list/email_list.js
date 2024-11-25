@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
     $("#join_list").addEventListener("click", () => {
         // get values user entered in textboxes
+        
         const email1 = $("#email_1");
         const email2 = $("#email_2");
         const firstName = $("#first_name");
