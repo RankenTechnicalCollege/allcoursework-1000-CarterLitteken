@@ -35,6 +35,7 @@ const processEntries = () => {
     const phone = $("#phone");
     const country = $("#country");
     const terms = $("#terms");
+    const comment = $("#comment");
 
     // create array for error messages
     const msgs = [];
