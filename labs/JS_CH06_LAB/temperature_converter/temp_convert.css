@@ -18,24 +18,13 @@ label {
     text-align: right;
     vertical-align: top;
 }
-input, select, textarea {
+input {
     margin-left: 1em;
     margin-right: 0.5em;
 }
-select { 
-    width: 13em; 
-}
-textarea {
-    height: 5em;
-    width: 20em;
-}
-span {
-    color: red;
-    vertical-align: top;
-}
-.messages {
-    border: 3px solid red;
+output {
     color: red;
     padding: 2em;
     margin-bottom: 2em;
+    margin-left: 1em;
 }
