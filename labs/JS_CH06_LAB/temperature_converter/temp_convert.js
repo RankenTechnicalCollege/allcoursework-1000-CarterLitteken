@@ -14,6 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		if (toCelsius.checked == true){
 			enterDegrees.previousElementSibling.textContent = "Enter F degrees:";
 			resultDegrees.previousElementSibling.textContent = "Degrees Celsius:";
+		} else {
+			enterDegrees.previousElementSibling.textContent = "Enter C degrees:";
+			resultDegrees.previousElementSibling.textContent = "Degrees Fahrenheit:";
 		}
     });
 });
