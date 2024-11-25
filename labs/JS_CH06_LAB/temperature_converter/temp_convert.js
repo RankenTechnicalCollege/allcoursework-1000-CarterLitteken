@@ -9,7 +9,7 @@ const resultDegrees = $("#resultDegrees");
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    $("#toCelsius").addEventListener("change", () => {
+  $("#toCelsius").addEventListener("change", () => {
 		if (toCelsius.checked == true){
 			enterDegrees.previousElementSibling.textContent = "Enter F degrees:";
 			resultDegrees.previousElementSibling.textContent = "Degrees Celsius:";
