@@ -4,8 +4,25 @@ const $ = selector => document.querySelector(selector);
 
 const toCelsius = $("#toCelsius");
 const toFahrenheit = $("#toFahrenheit");
-const enterDegrees = $("#enterDegrees");
-const resultDegrees = $("#resultDegrees");
+const enterDegrees = parseFloat($("#enterDegrees").value);
+let resultDegrees = $("#resultDegrees");
+
+const convert = () => {
+	if (isNaN(enterDegrees) = false) {
+		$("#message").value = "You must enter a valid number for degrees";
+	}
+	else {
+		$("#message").value = "";
+	}
+	
+	if (toCelsius.checked == true) {
+		resultDegrees = (enterDegrees - 32) * (5/9);
+		$("#resultDegrees").value = resultDegrees.toFixed(2);
+	} else if (toFahrenheit.checked == true) {
+		resultDegrees = (enterDegrees * (9/5)) +32;
+		$("#resultDegrees").value = resultDegrees;
+	}
+};
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -28,4 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			resultDegrees.previousElementSibling.textContent = "Degrees Celsius:";
 		}
 	});
+
+	$("#convert").addEventListener("click", convert);
+
 });
