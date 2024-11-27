@@ -40,17 +40,16 @@ document.addEventListener("DOMContentLoaded", () => {
 		else {
 			$("#message").innerHTML = "";
 		}
-		let error = $("#message");
 		
-		if (toCelsius.checked == true && error == "") {
+		
+		if (toCelsius.checked == true) {
 			resultDegrees = (enterDegrees - 32) * (5/9);
-			$("#resultDegrees").value = resultDegrees;
 		}
 		
-		if (toFahrenheit.checked == true && error == "") {
+		if (toFahrenheit.checked == true) {
 			 resultDegrees = (enterDegrees * (9/5)) + 32;
-			$("#resultDegrees").value = resultDegrees;
 		}
+		$("#resultDegrees").value = resultDegrees;
 	});
 
 });
