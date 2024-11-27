@@ -2,31 +2,13 @@
 
 const $ = selector => document.querySelector(selector);
 
-const toCelsius = $("#toCelsius");
-const toFahrenheit = $("#toFahrenheit");
-const enterDegrees = parseFloat($("#enterDegrees").value);
-let resultDegrees = $("#resultDegrees");
-
-const convert = () => {
-	if (isNaN(enterDegrees) = false) {
-		$("#message").value = "You must enter a valid number for degrees";
-	}
-	else {
-		$("#message").value = "";
-	}
-	
-	if (toCelsius.checked == true) {
-		resultDegrees = (enterDegrees - 32) * (5/9);
-		$("#resultDegrees").value = resultDegrees.toFixed(2);
-	} else if (toFahrenheit.checked == true) {
-		resultDegrees = (enterDegrees * (9/5)) +32;
-		$("#resultDegrees").value = resultDegrees;
-	}
-};
 
 document.addEventListener("DOMContentLoaded", () => {
 
   $("#toCelsius").addEventListener("change", () => {
+		const toCelsius = $("#toCelsius");
+		const enterDegrees = $("#enterDegrees");
+		let resultDegrees = $("#resultDegrees");
 		if (toCelsius.checked == true){
 			enterDegrees.previousElementSibling.textContent = "Enter F degrees:";
 			resultDegrees.previousElementSibling.textContent = "Degrees Celsius:";
@@ -37,6 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 	$("#toFahrenheit").addEventListener("change", () => {
+		const toFahrenheit = $("#toFahrenheit");
+		const enterDegrees = $("#enterDegrees");
+		let resultDegrees = $("#resultDegrees");
 		if (toFahrenheit.checked == true){
 			enterDegrees.previousElementSibling.textContent = "Enter C degrees:";
 			resultDegrees.previousElementSibling.textContent = "Degrees Fahrenheit:";
@@ -46,6 +31,26 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	});
 
-	$("#convert").addEventListener("click", convert);
+	$("#convert").addEventListener("click", () => {
+		const enterDegrees = parseFloat($("#enterDegrees").value);
+		let resultDegrees = $("#resultDegrees");
+		if (isNaN(enterDegrees) = true || enterDegrees == "") {
+			$("#message").innerHTML = "You must enter a valid number for degrees";
+		}
+		else {
+			$("#message").innerHTML = "";
+		}
+		let error = $("#message");
+		
+		if (toCelsius.checked == true && error == "") {
+			resultDegrees = (enterDegrees - 32) * (5/9);
+			$("#resultDegrees").value = resultDegrees;
+		}
+		
+		if (toFahrenheit.checked == true && error == "") {
+			 resultDegrees = (enterDegrees * (9/5)) + 32;
+			$("#resultDegrees").value = resultDegrees;
+		}
+	});
 
 });
