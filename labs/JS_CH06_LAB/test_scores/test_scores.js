@@ -30,9 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
         if (name_error == false && score_error == false) {
             scores_arr.push(name,score);
             console.log(scores_arr);
-        } else {
-            $("#name").focus();
         }
+        
+        $("#name").focus();
     });
 
 });
