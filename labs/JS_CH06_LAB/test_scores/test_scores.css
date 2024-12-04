@@ -14,11 +14,11 @@ div {
 }
 label {
     display: inline-block;
+    width: 3em;
     text-align: right;
     vertical-align: top;
 }
 input {
-    display: inline-block;
     margin-left: 1em;
     margin-right: 0.5em;
 }
@@ -27,8 +27,4 @@ output {
     padding: 2em;
     margin-bottom: 2em;
     margin-left: 1em;
-}
-.alignment {
-    display: block;
-    white-space: pre;
 }
