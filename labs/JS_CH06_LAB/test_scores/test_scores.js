@@ -7,28 +7,27 @@ document.addEventListener("DOMContentLoaded", () => {
     const scores_arr = [];
     let name = $("#name");
     let score = $("#score");
-    let error1 = false;
-    let error2 = false;
+    let name_error = false;
+    let score_error = false;
 
     $("#add_to_arr").addEventListener("click", () => {
-        if (name == "") {
+        if (!isNaN(name) || name == "") {
             $("#name_error").value = "Please enter a name";
-            error1 = true;
+            name_error = true;
         } else {
-            $("#name_error").value = "";
-            error1 = false;            
+            name_error = false;
         }
 
-        if (isNaN(score) == true || score < 0 && score > 100) {
+        if (isNaN(score) || score < 0 && score > 100) {
             $("#score_error").value = "Score must be between 0 and 100";
-            error2 = true;
+            score_error = true;
         } else {
-            $("#score_error").value = "";
-            error2 = false;
+            score_error = false;
         }
 
-
-        if (error1 == false && error2 == false) {
+        if (name_error == false && score_error == false) {
+            $("#name_error").value = "";
+            $("#score_error").value = "";
             scores_arr.push(name,score);
             console.log(scores_arr);
         } else {
