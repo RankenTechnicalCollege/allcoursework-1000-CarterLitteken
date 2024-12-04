@@ -2,10 +2,17 @@
 
 const $ = selector => document.querySelector(selector);
 
-const test_scores = () => {
+document.addEventListener("DOMContentLoaded", () => {
+    
     const scores_arr = [,]
     let name = $("#name");
     let score = $("#score");
 
-    if ()
-};
+    $("#add_to_arr").addEventListener("click", () => {
+        if (name == "") {
+            $("#name_error").value = "Please enter a name";
+        } else 
+
+    });
+
+});
