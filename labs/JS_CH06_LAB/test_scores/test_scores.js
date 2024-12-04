@@ -2,12 +2,6 @@
 
 const $ = selector => document.querySelector(selector);
 
-const focusAndSelect = selector => {
-    const elem = $(selector);
-    elem.focus();
-    elem.select();
-};
-
 document.addEventListener("DOMContentLoaded", () => {
 
     const scores_arr = [];
@@ -35,10 +29,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (error1 == false && error2 == false) {
             scores_arr.push(name,score);
+            console.log(scores_arr);
         } else {
             $("#name").focus();
         }
-
     });
 
 });
