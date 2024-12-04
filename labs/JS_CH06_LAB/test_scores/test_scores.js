@@ -35,4 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
         $("#name").focus();
     });
 
+    //for scores_arr all names are even numbers and all scores are odd numbers
+
 });
