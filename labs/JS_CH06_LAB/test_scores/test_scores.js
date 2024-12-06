@@ -39,17 +39,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     //for scores_arr all names are even numbers and all scores are odd numbers
     $("#display_results").addEventListener("click", () => {
-        const buttons = $("#buttons")
+        const buttons = $("#buttons_container")
         const title = $("#results")
+        const h2 = document.createElement("h2");
+        const results = document.createTextNode("Results");
+        const div = document.createElement("div")
+        const output = document.createElement("output")
 
         if (!title) {
-            const h2 = document.createElement("h2");
-            const results = document.createTextNode("Results");
             buttons.insertAdjacentElement("afterend", h2);
             h2.appendChild(results);
-            $("h2").setAttribute("id", "results")
-            const div = document.createElement("div")
-            
+            $("h2").insertAdjacentElement("afterend", div)
+            $("h2").
+
         } else {
             
         }
