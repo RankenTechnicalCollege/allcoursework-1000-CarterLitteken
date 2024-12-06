@@ -7,11 +7,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const scores_arr = [];
     const name = $("#name");
     const score = $("#score");
-    let name_error = false;
-    let score_error = false;
-    let error = false;
 
     $("#add_to_arr").addEventListener("click", () => {
+        let name_error = false;
+        let score_error = false;
 
         if (!isNaN(name.value) || name == "") {
             $("#name_error").value = "Please enter a name";
