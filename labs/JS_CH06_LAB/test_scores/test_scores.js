@@ -5,13 +5,13 @@ const $ = selector => document.querySelector(selector);
 document.addEventListener("DOMContentLoaded", () => {
 
     const scores_arr = [];
-    const student_name = $("#student_name");
+    const name = $("#name");
     const score = $("#score");
     let name_error = false;
     let score_error = false;
 
     $("#add_to_arr").addEventListener("click", () => {
-        if (!isNaN(student_name) || student_name == "") {
+        if (!isNaN(name) || name == "") {
             $("#name_error").value = "Please enter a name";
             name_error = true;
         } else {
@@ -28,11 +28,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         if (name_error == false && score_error == false) {
-            scores_arr.push(student_name,score);
+            scores_arr.push(name,score);
             console.log(scores_arr);
         }
         
-        $("#student_name").focus();
+        $("#name").focus();
     });
 
     //for scores_arr all names are even numbers and all scores are odd numbers
