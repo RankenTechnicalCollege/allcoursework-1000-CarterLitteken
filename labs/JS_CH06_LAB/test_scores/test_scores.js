@@ -51,8 +51,8 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
     */
     $("#display_results").addEventListener("click", () => {
-        const buttons = $("#buttons")
-        const title = $("#results")
+        const buttons = $("#buttons_container")
+        const title = $("#results_container")
         const h2 = document.createElement("h2");
         const results = document.createTextNode("Results");
         const div = document.createElement("div")
@@ -61,10 +61,10 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!title) {
             buttons.insertAdjacentElement("afterend", h2);
             h2.appendChild(results);
-            $("h2").insertAdjacentElement("afterend", div)
-            
-
-
+            buttons.nextElementSibling.setAttribute("id", "results_h2")
+            $("#results_h2").insertAdjacentElement("afterend", div)
+            $("#results_h2").nextElementSibling.setAttribute("id", "results")
+            title
         } else {
             
         }
