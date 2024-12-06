@@ -38,8 +38,20 @@ document.addEventListener("DOMContentLoaded", () => {
         $("#name").focus();
     });
     //for scores_arr all names are even numbers and all scores are odd numbers
+    /*
+    <h2>Results</h2>
+    <div>
+        <output name="avg_score" id="avg_score"></output>
+        <br>
+        <output name="high_score" id="high_score"></output>
+    </div>
+    <h2>Scores</h2>
+    <div>
+        <output name="scores" id="scores"></output>
+    </div>
+    */
     $("#display_results").addEventListener("click", () => {
-        const buttons = $("#buttons_container")
+        const buttons = $("#buttons")
         const title = $("#results")
         const h2 = document.createElement("h2");
         const results = document.createTextNode("Results");
@@ -50,7 +62,8 @@ document.addEventListener("DOMContentLoaded", () => {
             buttons.insertAdjacentElement("afterend", h2);
             h2.appendChild(results);
             $("h2").insertAdjacentElement("afterend", div)
-            $("h2").
+            
+
 
         } else {
             
