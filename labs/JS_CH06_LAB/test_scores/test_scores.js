@@ -51,25 +51,44 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
     */
     $("#display_results").addEventListener("click", () => {
-        const buttons = $("#buttons_container")
-        const title = $("#results_container")
+        const container = $("#results_container");
         const h2 = document.createElement("h2");
         const results = document.createTextNode("Results");
-        const div = document.createElement("div")
-        const output = document.createElement("output")
+        const div = document.createElement("div");
+        const output = document.createElement("output");
+        let total = 0;
+        let avg_score = 0;
+        let high_score_name = "";
+        let high_score = 0;
 
-        if (!title) {
-            buttons.insertAdjacentElement("afterend", h2);
+        if (!container) {
+            $("#buttons_container").insertAdjacentElement("afterend", h2);
             h2.appendChild(results);
-            buttons.nextElementSibling.setAttribute("id", "results_h2")
-            $("#results_h2").insertAdjacentElement("afterend", div)
-            $("#results_h2").nextElementSibling.setAttribute("id", "results")
-            title
+            $("#buttons_container").nextElementSibling.setAttribute("id", "results_h2");
+            $("#results_h2").insertAdjacentElement("afterend", div);
+            $("#results_h2").nextElementSibling.setAttribute("id", "results_container");
+            $("#results_container").appendChild(output);
+            $("#results_container").firstChild.setAttribute("id", "avg_score");
+            $("#results_container").appendChild(output);
+            $("#results_container").lastChild.setAttribute("id", "high_score");
+            
         } else {
             
         }
-        
-        
+        for (let i = 1; i <= scores_arr.length; i += 2) {
+            let score = scores_arr[i];
+            total += score;
+            let scores = (scores_arr.length)/2;
+            let avg = total/scores;
+            avg_score = avg;
+            if (scores_arr[i] > high_score) {
+                high_score = scores_arr[i];
+                high_score_name = scores_arr[i-1];
+            }
+
+        }
+        $("#results_container").firstChild.value = "Average score = " + avg_score;
+        $("#results_container").lastChild.value = "High score = " + high_score_name + " with a score of " + high_score;
 
     });
 
