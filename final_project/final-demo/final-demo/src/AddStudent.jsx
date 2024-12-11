@@ -14,7 +14,7 @@ const AddStudent = (props) => {
             'firstName': firstName,
             'lastName': lastName,
             'email': email,
-            'gradYear': gradYear,
+            'gradYear': parseInt(gradYear),
             'image': URL.createObjectURL(selectedFile)
         }
         props.addStudent(newStudent)
