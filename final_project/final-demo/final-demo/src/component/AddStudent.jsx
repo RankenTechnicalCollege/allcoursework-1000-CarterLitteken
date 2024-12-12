@@ -47,7 +47,7 @@ const AddStudent = (props) => {
             <input type='file' id='fileUpload' className='form-control' onChange={imageUpdate} />
         </div>
         <div className='col-md-2'>
-            <button type='button' className='btn btn-success btn-lg' id='btnAdd' onClick={doWork}>Add Student</button>
+            <button type='button' className='btn btn-success btn-lg' id='btnAdd' onClick={doWork}>Add Student<FontAwesomeIcon={faPlusCircle} /></button>
         </div>
         
     </div>
