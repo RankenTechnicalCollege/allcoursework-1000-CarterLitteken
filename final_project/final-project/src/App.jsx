@@ -12,7 +12,7 @@ function App() {
   const [allItems, setAllItems] = useState(null);
   const [searchResults, setSearchResults] = useState(null);
   const [keywords, setKeywords] = useState('');
-  const [gradYear, setGradYear] = useState('');
+  const [itemType, setItemType] = useState('');
 
   useEffect(() => {
     if(localStorage){
@@ -29,74 +29,64 @@ function App() {
 
   const items = [{
     id: nanoid(),
-    firstName: "Leeland",
-    lastName: "Ebbing",
-    email: "lebbing0@patch.com",
+    itemName: "Leeland",
+    email: "Armor",
     image: "student1.jpg",
-    gradYear: 2024
+    itemType: "Armor"
   }, {
     id: nanoid(),
-    firstName: "Darb",
-    lastName: "Scrogges",
+    itemName: "Darb",
     email: "dscrogges1@tiny.cc",
     image: "student2.jpg",
-    gradYear: 2025
+    itemType: "Potion"
   }, {
     id: nanoid(),
-    firstName: "Rochella",
-    lastName: "Trudgion",
+    itemName: "Rochella",
     email: "rtrudgion2@live.com",
     image: "student3.jpg",
-    gradYear: 2026
+    itemType: "Ring"
   }, {
     id: nanoid(),
-    firstName: "Tessie",
-    lastName: "Hellyar",
+    itemName: "Tessie",
     email: "thellyar3@europa.eu",
     image: "student4.jpg",
-    gradYear: 2025
+    itemType: "Rod"
   }, {
     id: nanoid(),
-    firstName: "Sibeal",
-    lastName: "Harrild",
+    itemName: "Sibeal",
     email: "sharrild4@icio.us",
     image: "student5.jpg",
-    gradYear: 2024
+    itemType: "Scroll"
   }, {
     id: nanoid(),
-    firstName: "Richard",
-    lastName: "Frensch",
+    itemName: "Richard",
     email: "rfrensch5@nymag.com",
     image: "student6.jpg",
-    gradYear: 2026
+    itemType: "Staff"
   }, {
     id: nanoid(),
-    firstName: "Beaufort",
-    lastName: "Escudier",
+    itemName: "Beaufort",
     email: "bescudier6@usnews.com",
     image: "student7.jpg",
-    gradYear: 2025
+    itemType: "Wand"
   }, {
     id: nanoid(),
-    firstName: "Kennedy",
-    lastName: "Maxfield",
+    itemName: "Kennedy",
     email: "kmaxfield7@squidoo.com",
     image: "student8.jpg",
-    gradYear: 2024
+    itemType: "Weapon"
   }, {
     id: nanoid(),
-    firstName: "Georgeanna",
-    lastName: "O'Riordan",
+    itemName: "Georgeanna",
     email: "goriordan8@hhs.gov",
     image: "student9.jpg",
-    gradYear: 2026
+    itemType: "Wondrous Item"
   }, {
     id: nanoid(),
-    firstName: "Marisa",
-    lastName: "Carletto",
+    itemName: "Marisa",
     email: "mcarletto9@opensource.org",
     image: "student10.jpg",
-    gradYear: 2025
+    itemType: "Other"
   }];
 
   const saveItems = (items) => {
@@ -132,16 +122,15 @@ function App() {
       keywordsArray = keywords.toLowerCase().split(' ');
     }
 
-    if(gradYear){
-      keywordsArray.push(gradYear.toString());
+    if(itemType){
+      keywordsArray.push(itemType.toString());
     }
 
     if(keywordsArray.length > 0){
       const searchResults = allItems.filter(item => {
         for(const word of keywordsArray){
-          if(item.firstName.toLowerCase().includes(word) || 
-             item.lastName.toLowerCase().includes(word) ||
-             item.gradYear === parseInt(word)){
+          if(item.itemName.toLowerCase().includes(word) ||
+             item.itemType == word){
               return true;
             }
         }
@@ -155,7 +144,27 @@ function App() {
   
   return (
     <div className='container'>
-      <div className='row' id='allItem'>
+      {/* Make search bar? Make it look rugged, medieval, or rural? */}
+      <div className='row mt-4' id='searchItems'>
+        <h3>Search Items</h3>
+        <div className='col-md-4'>
+          <label htmlFor='txtKeywords'>Search by Item Name</label>
+          <input type='text' className='form-control' placeholder='Search Item Name' onChange={e => setKeywords(e.currentTarget.value)} value={keywords} />
+        </div>
+        <div className='col-md-4'>
+          <label htmlFor='txtKeywords'>Search by Item Type</label>
+          <select className='form-select' value={itemType} onChange={e => setItemType(e.currentTarget.value)}>
+            <option value=''>All Item Type</option>
+            {_(allItems).map(item => item.itemType).sort().uniq().map(type => <option key={type} value={type}>{type}</option>).value()}
+          </select>
+        </div>
+        <div className='col-md-4 mt-3'>
+          <button type='button' className='btn btn-lg btn-primary' onClick={searchItems}>Search Items <FontAwesomeIcon icon={faSearch}/></button>
+        </div>
+
+      </div>
+      
+      <div className='row mt-5' id='allItem'>
         <h3>Current Items</h3>
         {searchResults && searchResults.map((item) => (
         <div className='col-lg-2' key={item.id}>
@@ -165,26 +174,9 @@ function App() {
   )}
       </div>
 
-        {/*!allStudents && <button type='button' className='btn btn-lg btn-success' onClick={() => setAllStudents(students)}>Save Student</button>*/}
-        {<AddItem addItem={addItem} />}
-        <div className='row mt-4' id='searchItems'>
-          <h3>Search Items</h3>
-          <div className='col-md-4'>
-            <label htmlFor='txtKeywords'>Search by First or Last Name</label>
-            <input type='text' className='form-control' placeholder='Search First or Last Name' onChange={e => setKeywords(e.currentTarget.value)} value={keywords} />
-          </div>
-          <div className='col-md-4'>
-            <label htmlFor='txtKeywords'>Search by Graduation Year</label>
-            <select className='form-select' value={gradYear} onChange={e => setGradYear(e.currentTarget.value)}>
-              <option value=''>Select Year</option>
-              {_(allItems).map(item => item.gradYear).sort().uniq().map(year => <option key={year} value={year}>{year}</option>).value()}
-            </select>
-          </div>
-          <div className='col-md-4 mt-3'>
-            <button type='button' className='btn btn-lg btn-primary' onClick={searchItems}>Search Items <FontAwesomeIcon icon={faSearch}/></button>
-          </div>
-
-        </div>
+      {/*!allStudents && <button type='button' className='btn btn-lg btn-success' onClick={() => setAllStudents(students)}>Save Student</button>*/}
+      {<AddItem addItem={addItem} />}
+      
     </div>
     
   )

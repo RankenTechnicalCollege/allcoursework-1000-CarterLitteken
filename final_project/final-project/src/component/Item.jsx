@@ -4,22 +4,20 @@ import { faFloppyDisk, faMagicWandSparkles, faWarning } from '@fortawesome/free-
 
 const Item = (props) => {
   const [editMode, setEditMode] = useState(false);
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
+  const [itemName, setItemName] = useState('');
   const [email, setEmail] = useState('');
-  const [gradYear, setGradYear] = useState('');
+  const [itemType, setItemType] = useState('');
   
 
   useEffect(() => {
-    setFirstName(props.item.firstName);
-    setLastName(props.item.lastName);
+    setItemName(props.item.itemName);
     setEmail(props.item.email);
-    setGradYear(props.item.gradYear);
+    setItemType(props.item.itemType);
   },[]);
 
   const saveItem = () => {
-    setEditMode(false);
-    const updatedItem = {firstName:firstName, lastName:lastName, email:email, gradYear:gradYear, id:props.item.id, image:props.item.image};
+    setEditMode(false); 
+    const updatedItem = {itemName:itemName, email:email, itemType:itemType, id:props.item.id, image:props.item.image};
     props.updateItem(updatedItem);
   };
 
@@ -29,19 +27,17 @@ const Item = (props) => {
     <div className='card'>
       <img src={props.item.image} alt='Our Item' className='card-image-top mx-auto' />
       {!editMode && <ul className='list-group list-group-flush'>
-        <li className='list-group-item text-center'>{props.item.firstName}</li>
-        <li className='list-group-item text-center'>{props.item.lastName}</li>
+        <li className='list-group-item text-center'>{props.item.itemName}</li>
         <li className='list-group-item text-center'>{props.item.email}</li>
-        <li className='list-group-item text-center'>{props.item.gradYear}</li>
+        <li className='list-group-item text-center'>{props.item.itemType}</li>
         <button type='button' className='btn btn-danger' onClick={() => props.removeItem(props.item)}>Delete Item <FontAwesomeIcon icon={faWarning}/></button>
         <button type='button' className='btn btn-warning' onClick={() => setEditMode(true)}>Edit Item <FontAwesomeIcon icon={faMagicWandSparkles}/></button>
       </ul>
       }
       {editMode && <ul className='list-group list-group-flush'>
-        <li className='list-group-item text-center'><input type='text' className='form-control' value={firstName} onChange={(e) => setFirstName(e.currentTarget.value)} /></li>
-        <li className='list-group-item text-center'><input type='text' className='form-control' value={lastName} onChange={(e) => setLastName(e.currentTarget.value)} /></li>
+        <li className='list-group-item text-center'><input type='text' className='form-control' value={itemName} onChange={(e) => setItemName(e.currentTarget.value)} /></li>
         <li className='list-group-item text-center'><input type='email' className='form-control' value={email} onChange={(e) => setEmail(e.currentTarget.value)} /></li>
-        <li className='list-group-item text-center'><input type='text' className='form-control' value={gradYear} onChange={(e) => setGradYear(e.currentTarget.value)} /></li>
+        <li className='list-group-item text-center'><input type='text' className='form-control' value={itemType} onChange={(e) => setItemType(e.currentTarget.value)} /></li>
         <li className='list-group-item text-center'><button type='button' className='btn btn-secondary' onClick={saveItem}>Save <FontAwesomeIcon icon={faFloppyDisk} /></button></li>
       </ul>}
 			

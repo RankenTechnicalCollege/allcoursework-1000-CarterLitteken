@@ -5,19 +5,17 @@ import { faPlusCircle } from '@fortawesome/free-solid-svg-icons'
 import './AddItem.css'
 
 const AddItem = (props) => {
-    const[firstName, setFirstName] = useState('');
-    const[lastName, setLastName] = useState('');
+    const[itemName, setItemName] = useState('');
     const[email, setEmail] = useState('');
-    const[gradYear, setGradYear] = useState('');
+    const[itemType, setItemType] = useState('');
     const[selectedFile, setSelectedFile] = useState('');
 
     const doWork = () => {
         const newItem = {
             'id': nanoid(),
-            'firstName': firstName,
-            'lastName': lastName,
+            'itemName': itemName,
             'email': email,
-            'gradYear': parseInt(gradYear),
+            'itemType': itemType,
             'image': URL.createObjectURL(selectedFile)
         }
         props.addItem(newItem)
@@ -28,23 +26,19 @@ const AddItem = (props) => {
     }
 
   return (
-    <div className='row mt-5' id='addStudent'>
+    <div className='row mt-4' id='addItem'>
         <h3>Add Item</h3>
         <div className='col-md-2'>
-            <label htmlFor='txtFirstName' className='form-label'>First Name</label>
-            <input type='text' id='txtFirstName' placeholder='First Name' className='form-control' onChange={(event) => setFirstName(event.currentTarget.value)} value={firstName} />
-        </div>
-        <div className='col-md-2'>
-            <label htmlFor='txtLastName' className='form-label'>Last Name</label>
-            <input type='text' id='txtLastName' placeholder='Last Name' className='form-control' onChange={(event) => setLastName(event.currentTarget.value)} value={lastName} />
+            <label htmlFor='txtItemName' className='form-label'>Item Name</label>
+            <input type='text' id='txtItemName' placeholder='Item' className='form-control' onChange={(event) => setItemName(event.currentTarget.value)} value={itemName} />
         </div>
         <div className='col-md-2'>
             <label htmlFor='txtEmail' className='form-label'>Email Address</label>
             <input type='email' id='txtEmail' placeholder='Email Address' className='form-control' onChange={(event) => setEmail(event.currentTarget.value)} value={email} />
         </div>
         <div className='col-md-2'>
-            <label htmlFor='txtGradYear' className='form-label'>Graduation Year</label>
-            <input type='text' id='txtGradYear' placeholder='2024' className='form-control' onChange={(event) => setGradYear(event.currentTarget.value)} value={gradYear} />
+            <label htmlFor='txtItemType' className='form-label'>Item Type</label>
+            <input type='text' id='txtItemType' placeholder='Type' className='form-control' onChange={(event) => setItemType(event.currentTarget.value)} value={itemType} />
         </div>
         <div className='col-md-2'>
             <label htmlFor='fileUpload' className='form-label'>Item Image</label>
