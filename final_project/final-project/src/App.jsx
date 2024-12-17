@@ -153,7 +153,7 @@ function App() {
           </select>
         </div>
         <div className='col-md-4 mt-3'>
-          <button type='button' className='btn btn-lg btn-primary' onClick={searchItems}>Search Items <FontAwesomeIcon icon={faSearch}/></button>
+          <button type='button' className='btn btn-lg btn-bd-primary' onClick={searchItems}>Search Items <FontAwesomeIcon icon={faSearch}/></button>
         </div>
 
       </div>
