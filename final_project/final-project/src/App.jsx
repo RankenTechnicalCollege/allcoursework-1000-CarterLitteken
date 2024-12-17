@@ -59,27 +59,27 @@ function App() {
     itemType: "Scroll"
   }, {
     id: nanoid(),
-    itemName: "Staff of Power",
-    rarity: "Very Rare",
-    image: "power_staff.jpeg",
+    itemName: "Staff of the Magi",
+    rarity: "Legendary",
+    image: "magi_staff.jpeg",
     itemType: "Staff"
   }, {
     id: nanoid(),
-    itemName: "Beaufort",
-    rarity: "bescudier6@usnews.com",
-    image: "student7.jpg",
+    itemName: "Wand of Magic Missiles",
+    rarity: "Uncommon",
+    image: "magic_missiles_wand.jpeg",
     itemType: "Wand"
   }, {
     id: nanoid(),
-    itemName: "Kennedy",
-    rarity: "kmaxfield7@squidoo.com",
-    image: "student8.jpg",
+    itemName: "Vorpal Sword - Longsword",
+    rarity: "Legendary",
+    image: "vorpal_sword.jpeg",
     itemType: "Weapon"
   }, {
     id: nanoid(),
-    itemName: "Georgeanna",
-    rarity: "goriordan8@hhs.gov",
-    image: "student9.jpg",
+    itemName: "Orb of Dragonkind",
+    rarity: "Artifact",
+    image: "dragonkind_orb.png",
     itemType: "Wondrous Item"
   }];
 
