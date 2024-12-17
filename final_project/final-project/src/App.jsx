@@ -29,64 +29,58 @@ function App() {
 
   const items = [{
     id: nanoid(),
-    itemName: "Leeland",
-    email: "Armor",
-    image: "student1.jpg",
+    itemName: "Armor of Resistance - Breastplate",
+    rarity: "Rare",
+    image: "resistance_armor.jpeg",
     itemType: "Armor"
   }, {
     id: nanoid(),
-    itemName: "Darb",
-    email: "dscrogges1@tiny.cc",
-    image: "student2.jpg",
+    itemName: "Potion of Water Breathing",
+    rarity: "Uncommon",
+    image: "water_breathing_potion.png",
     itemType: "Potion"
   }, {
     id: nanoid(),
-    itemName: "Rochella",
-    email: "rtrudgion2@live.com",
-    image: "student3.jpg",
+    itemName: "Ring of Spell Storing",
+    rarity: "Rare",
+    image: "spell_storing_ring.jpeg",
     itemType: "Ring"
   }, {
     id: nanoid(),
-    itemName: "Tessie",
-    email: "thellyar3@europa.eu",
-    image: "student4.jpg",
+    itemName: "Rod of Absorption",
+    rarity: "Very Rare",
+    image: "absorption_rod.jpeg",
     itemType: "Rod"
   }, {
     id: nanoid(),
-    itemName: "Sibeal",
-    email: "sharrild4@icio.us",
-    image: "student5.jpg",
+    itemName: "Scroll of Protection - Dragons",
+    rarity: "Rare",
+    image: "protection_scroll.png",
     itemType: "Scroll"
   }, {
     id: nanoid(),
-    itemName: "Richard",
-    email: "rfrensch5@nymag.com",
-    image: "student6.jpg",
+    itemName: "Staff of Power",
+    rarity: "Very Rare",
+    image: "power_staff.jpeg",
     itemType: "Staff"
   }, {
     id: nanoid(),
     itemName: "Beaufort",
-    email: "bescudier6@usnews.com",
+    rarity: "bescudier6@usnews.com",
     image: "student7.jpg",
     itemType: "Wand"
   }, {
     id: nanoid(),
     itemName: "Kennedy",
-    email: "kmaxfield7@squidoo.com",
+    rarity: "kmaxfield7@squidoo.com",
     image: "student8.jpg",
     itemType: "Weapon"
   }, {
     id: nanoid(),
     itemName: "Georgeanna",
-    email: "goriordan8@hhs.gov",
+    rarity: "goriordan8@hhs.gov",
     image: "student9.jpg",
     itemType: "Wondrous Item"
-  }, {
-    id: nanoid(),
-    itemName: "Marisa",
-    email: "mcarletto9@opensource.org",
-    image: "student10.jpg",
-    itemType: "Other"
   }];
 
   const saveItems = (items) => {
@@ -143,7 +137,7 @@ function App() {
   };
   
   return (
-    <div className='container'>
+    <div className='container-fluid'>
       {/* Make search bar? Make it look rugged, medieval, or rural? */}
       <div className='row mt-4' id='searchItems'>
         <h3>Search Items</h3>

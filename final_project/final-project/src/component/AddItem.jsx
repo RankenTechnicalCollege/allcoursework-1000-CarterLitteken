@@ -6,7 +6,7 @@ import './AddItem.css'
 
 const AddItem = (props) => {
     const[itemName, setItemName] = useState('');
-    const[email, setEmail] = useState('');
+    const[rarity, setRarity] = useState('');
     const[itemType, setItemType] = useState('');
     const[selectedFile, setSelectedFile] = useState('');
 
@@ -14,7 +14,7 @@ const AddItem = (props) => {
         const newItem = {
             'id': nanoid(),
             'itemName': itemName,
-            'email': email,
+            'rarity': rarity,
             'itemType': itemType,
             'image': URL.createObjectURL(selectedFile)
         }
@@ -33,8 +33,8 @@ const AddItem = (props) => {
             <input type='text' id='txtItemName' placeholder='Item' className='form-control' onChange={(event) => setItemName(event.currentTarget.value)} value={itemName} />
         </div>
         <div className='col-md-2'>
-            <label htmlFor='txtEmail' className='form-label'>Email Address</label>
-            <input type='email' id='txtEmail' placeholder='Email Address' className='form-control' onChange={(event) => setEmail(event.currentTarget.value)} value={email} />
+            <label htmlFor='txtRarity' className='form-label'>Item Rarity</label>
+            <input type='text' id='txtRarity' placeholder='Item Rarity' className='form-control' onChange={(event) => setRarity(event.currentTarget.value)} value={rarity} />
         </div>
         <div className='col-md-2'>
             <label htmlFor='txtItemType' className='form-label'>Item Type</label>
