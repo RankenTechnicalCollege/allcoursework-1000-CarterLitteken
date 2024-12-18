@@ -30,22 +30,22 @@ const AddItem = (props) => {
         <h3>Add Item</h3>
         <div className='col-md-2'>
             <label htmlFor='txtItemName' className='form-label'>Item Name</label>
-            <input type='text' id='txtItemName' placeholder='Item' className='form-control' onChange={(event) => setItemName(event.currentTarget.value)} value={itemName} />
+            <input type='text' id='txtItemName' placeholder='Name' className='form-control' onChange={(event) => setItemName(event.currentTarget.value)} value={itemName} />
         </div>
         <div className='col-md-2'>
             <label htmlFor='txtRarity' className='form-label'>Item Rarity</label>
-            <input type='text' id='txtRarity' placeholder='Item Rarity' className='form-control' onChange={(event) => setRarity(event.currentTarget.value)} value={rarity} />
+            <input type='text' id='txtRarity' placeholder='Rarity' className='form-control' onChange={(event) => setRarity(event.currentTarget.value)} value={rarity} />
         </div>
         <div className='col-md-2'>
             <label htmlFor='txtItemType' className='form-label'>Item Type</label>
             <input type='text' id='txtItemType' placeholder='Type' className='form-control' onChange={(event) => setItemType(event.currentTarget.value)} value={itemType} />
         </div>
-        <div className='col-md-2'>
+        <div className='col-md-3'>
             <label htmlFor='fileUpload' className='form-label'>Item Image</label>
             <input type='file' id='fileUpload' className='form-control' onChange={imageUpdate} />
         </div>
-        <div className='col-md-2'>
-            <button type='button' className='btn btn-success btn-lg' id='btnAdd' onClick={doWork}>Add Item <FontAwesomeIcon icon={faPlusCircle}/></button>
+        <div className='col-md-2 mt-4'>
+            <button type='button' className='btn btn-lg btn-success' id='btnAdd' onClick={doWork}>Add Item <FontAwesomeIcon icon={faPlusCircle}/></button>
         </div>
         
     </div>

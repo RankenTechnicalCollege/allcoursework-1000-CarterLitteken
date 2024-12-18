@@ -13,7 +13,3 @@
     color: saddlebrown;
     background-color: antiquewhite;
 }
-
-.btn-primary {
-    --bs-btn-bg: var(--bs-blue-bg);
-}
